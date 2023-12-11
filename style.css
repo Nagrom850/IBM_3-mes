@@ -31,14 +31,17 @@ background-color: rgba(123, 123, 123, 0.4);
 header{
     background-color: rgb(200, 200, 200);
     height: auto;
-    display: flex;
     padding: 10px;
     flex-wrap: wrap;
+    display: flex;
 }
 
 nav ul{
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 
 /*Main*/
 main{
@@ -58,6 +61,12 @@ section.HubBox{
     height: auto;
     padding: 5px;
     box-shadow: 1px 1px 2px;
+    transition: 0.3s;
+}
+
+section.HubBox:hover{
+    transform: translateY(-2px);
+    transition: 0.3s;
 }
 
 section.HubBox img{
