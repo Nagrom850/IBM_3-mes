@@ -33,6 +33,7 @@ header{
     height: auto;
     display: flex;
     padding: 10px;
+    flex-wrap: wrap;
 }
 
 nav ul{
@@ -50,10 +51,16 @@ main{
 }
 
 section.HubBox{
-    border: solid 2px gray;
+    border: solid 1px gray;
+    border-radius: 3px;
     flex-basis: 250px;
     height: auto;
     padding: 5px;
+    box-shadow: 1px 1px 2px;
+}
+
+section.HubBox img{
+    width: 100%;
 }
 
 /*Footer*/
