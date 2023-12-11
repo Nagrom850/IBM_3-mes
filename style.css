@@ -32,6 +32,7 @@ header{
     background-color: rgb(200, 200, 200);
     height: auto;
     display: flex;
+    padding: 10px;
 }
 
 nav ul{
@@ -51,6 +52,13 @@ main{
 section.HubBox{
     border: solid 2px gray;
     flex-basis: 250px;
-    height: 250px;
+    height: auto;
     padding: 5px;
+}
+
+/*Footer*/
+footer{
+    background-color: rgb(200, 200, 200);
+    height: auto;
+    padding: 10px;
 }
