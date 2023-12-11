@@ -51,6 +51,7 @@ main{
 }
 
 section.HubBox{
+    background-color: rgb(220, 220, 220);;
     border: solid 1px gray;
     border-radius: 3px;
     flex-basis: 250px;
@@ -61,6 +62,16 @@ section.HubBox{
 
 section.HubBox img{
     width: 100%;
+}
+
+section.HubBox h2{
+    text-align: center;
+    margin-top: 5px;
+}
+
+section.HubBox p{
+    text-align: justify;
+    padding: 0px 10px;
 }
 
 /*Footer*/
