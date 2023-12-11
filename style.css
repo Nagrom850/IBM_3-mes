@@ -5,6 +5,7 @@ html{
 body{
     height: 100%;
     background-color: rgb(240, 240, 240);
+    margin: 0;
 }
 
 ::-webkit-scrollbar {
@@ -28,7 +29,13 @@ background-color: rgba(123, 123, 123, 0.4);
 
 /*Header*/
 header{
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(200, 200, 200);
+    height: 30px;
+    display: flex;
+}
+
+nav ul{
+    list-style-type: none;
 }
 
 /*Main*/
@@ -38,6 +45,7 @@ main{
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    padding: 10px;
 }
 
 section.HubBox{
