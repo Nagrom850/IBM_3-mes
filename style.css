@@ -36,6 +36,11 @@ header{
     flex-wrap: wrap;
 }
 
+header img{
+    width: 100%;
+    height: auto;
+}
+
 nav ul{
     list-style-type: none;
 }
