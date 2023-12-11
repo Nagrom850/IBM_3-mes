@@ -36,6 +36,11 @@ header{
     display: flex;
 }
 
+header img{
+    width: 100%;
+    height: auto;
+}
+
 nav ul{
     list-style-type: none;
     display: flex;
