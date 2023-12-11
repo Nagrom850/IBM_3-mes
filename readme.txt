@@ -1,1 +1,1 @@
-b
+Ce site est ici pour présenter IBM à des élèves de 3ème.

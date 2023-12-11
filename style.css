@@ -30,7 +30,7 @@ background-color: rgba(123, 123, 123, 0.4);
 /*Header*/
 header{
     background-color: rgb(200, 200, 200);
-    height: 30px;
+    height: auto;
     display: flex;
 }
 
