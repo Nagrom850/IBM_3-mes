@@ -3,7 +3,7 @@ html{
 }
 
 body{
-    height: 100%;
+    height: auto;
     background-color: rgb(240, 240, 240);
     margin: 0;
 }
@@ -79,22 +79,24 @@ nav li a{
 /*Main*/
 main{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px;
-    justify-content: center;
-    padding: 10px;
+    padding: 10px 50px;
+    height: 100%;
+    max-height: 800px;
 }
 
 section.HubBox{
+    display: inline-block;
     background-color: rgb(220, 220, 220);;
     border: solid 1px gray;
     border-radius: 3px;
-    flex-basis: 250px;
     height: auto;
     padding: 5px;
     box-shadow: 1px 1px 2px;
     transition: 0.3s;
+    width: 250px;
 }
 
 section.HubBox:hover{
@@ -104,6 +106,7 @@ section.HubBox:hover{
 
 section.HubBox img{
     width: 100%;
+    border-radius: 3px;
 }
 
 section.HubBox h2{
