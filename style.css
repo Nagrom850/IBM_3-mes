@@ -1,5 +1,5 @@
 html{
-    height: 100%;
+    height: auto;
 }
 
 body{
@@ -25,15 +25,18 @@ background-color: rgba(123, 123, 123, 0.4);
     background: rgba(255, 255, 255, 0.5);
 }
 
-/*-------------------Hub------------------*/
 
-/*Header*/
+/*------------------Header----------------*/
 header{
     background-color: rgb(200, 200, 200);
     height: auto;
-    padding: 0 10px;
+    padding: 5px 20px;
     display: flex;
     align-items: center;
+}
+
+header h1{
+    margin: 0;
 }
 
 header img{
@@ -45,6 +48,7 @@ header img.right{
     margin-left: auto;
 }
 
+/*----------------Nav----------------*/
 nav{
     margin: auto;
 }
@@ -76,19 +80,20 @@ nav li a{
     color: black;
 }
 
-/*Main*/
+/*-----------------Main-------------------*/
 main{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     padding: 10px 50px;
-    height: 100%;
     max-height: 800px;
+    max-width: 1200px;
+    align-content: center;
+    margin: auto;
 }
 
 section.HubBox{
-    display: inline-block;
     background-color: rgb(220, 220, 220);;
     border: solid 1px gray;
     border-radius: 3px;
@@ -100,8 +105,10 @@ section.HubBox{
 }
 
 section.HubBox:hover{
-    transform: translateY(-2px);
     transition: 0.3s;
+    position: relative;
+    z-index: 100;
+    transform: scale(103%);
 }
 
 section.HubBox img{
@@ -111,17 +118,18 @@ section.HubBox img{
 
 section.HubBox h2{
     text-align: center;
-    margin-top: 5px;
+    margin: 5px;
 }
 
 section.HubBox p{
     text-align: justify;
     padding: 0 10px;
+    margin: 0 0 10px 0;
 }
 
 /*Footer*/
 footer{
     background-color: rgb(200, 200, 200);
     height: auto;
-    padding: 10px;
+    padding: 5px 20px;
 }
