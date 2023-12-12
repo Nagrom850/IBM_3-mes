@@ -71,8 +71,7 @@ nav li{
 
 nav li:hover{
     background-color: rgb(180, 180, 180);
-    transition: 0.3s;
-    transform: translateY(2px);
+    transform: translateY(1px);
 }
 
 nav li a{
@@ -90,8 +89,29 @@ main{
     max-height: 800px;
     max-width: 1200px;
     align-content: center;
+    justify-content: center;
     margin: auto;
+    transition: 0.3s;
 }
+
+@media screen and (max-width: 560px) {
+    main{
+        max-height: 2500px;
+        transition: 0.3s;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 561px) {
+    main{
+        max-height: 1200px;
+        transition: 0.3s;
+    }
+
+    section.HubBox{
+        width: 200px;
+    }
+}
+
 
 section.HubBox{
     background-color: rgb(220, 220, 220);;
@@ -108,7 +128,7 @@ section.HubBox:hover{
     transition: 0.3s;
     position: relative;
     z-index: 100;
-    transform: scale(103%);
+    transform: scale(101%);
 }
 
 section.HubBox img{
