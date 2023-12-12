@@ -80,38 +80,24 @@ nav li a{
     color: black;
 }
 
+/*Menu burger*/
+@media screen and (max-width: 560px) {
+}
+
 /*-----------------Main-------------------*/
 main{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 15px;
-    padding: 10px 50px;
-    max-height: 800px;
-    max-width: 1200px;
+    padding: 10px 30px;
+    max-height: 100vw;
     align-content: center;
     justify-content: center;
     margin: auto;
     transition: 0.3s;
 }
 
-@media screen and (max-width: 560px) {
-    main{
-        max-height: 2500px;
-        transition: 0.3s;
-    }
-}
-
-@media screen and (max-width: 1200px) and (min-width: 561px) {
-    main{
-        max-height: 1450px;
-        transition: 0.3s;
-    }
-
-    section.HubBox{
-        width: 200px;
-    }
-}
 
 /*Box*/
 section.HubBox{
@@ -122,7 +108,7 @@ section.HubBox{
     padding: 5px;
     box-shadow: 1px 1px 2px;
     transition: 0.3s;
-    width: 250px;
+    width: 31%;
 }
 
 #cloud{
@@ -152,12 +138,33 @@ section.HubBox img{
 section.HubBox h2{
     text-align: center;
     margin: 5px;
+    font-size: 100%;
 }
 
 section.HubBox p{
     text-align: justify;
     padding: 0 10px;
     margin: 0 0 10px 0;
+}
+
+@media screen and (max-width: 650px) {
+    main{
+        max-height: 5000px;
+    }
+
+    section.HubBox{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 650px) {
+    main{
+        max-height: 200vw;
+    }
+
+    section.HubBox{
+        width: 47%;
+    }
 }
 
 /*Footer*/
