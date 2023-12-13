@@ -68,16 +68,32 @@ nav li{
     border-radius: 15px;
     transition: 0.3s;
     cursor: pointer;
+    position: relative;
 }
 
-nav li:hover{
-    background-color: rgb(210, 210, 210);
-    transform: translateY(1px);
-}
+
 
 nav li a{
     text-decoration: none;
     color: black;
+}
+
+
+li::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;left: 5%;
+    width: 90%;
+    height: 2px;
+    background-color: black;
+    opacity: 1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.2s;
+}
+
+li:hover::after{
+    transform: scaleX(1);
 }
 
 /*Menu burger*/
