@@ -93,7 +93,6 @@ main{
     padding: 10px 30px;
     max-height: 100vw;
     align-content: center;
-    justify-content: center;
     margin: auto;
     transition: 0.3s;
 }
@@ -103,9 +102,9 @@ main{
 section.HubBox{
     background-color: rgb(230, 230, 230);
     border: solid 1px gray;
-    border-radius: 3px;
+    border-radius: 5px;
     height: auto;
-    padding: 5px;
+    padding: 10px;
     box-shadow: 1px 1px 2px;
     transition: 0.3s;
     width: 31%;
@@ -132,7 +131,7 @@ section.HubBox:hover{
 
 section.HubBox img{
     width: 100%;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 section.HubBox h2{
