@@ -60,6 +60,7 @@ nav ul{
     flex-wrap: wrap;
     gap: 5px;
     margin: auto;
+    justify-content: center;
 }
 
 nav li{
@@ -70,8 +71,6 @@ nav li{
     cursor: pointer;
     position: relative;
 }
-
-
 
 nav li a{
     text-decoration: none;
@@ -120,8 +119,7 @@ section.HubBox{
     background-color: rgb(230, 230, 230);
     border: solid 1px gray;
     border-radius: 5px;
-    height: auto;
-    padding: 10px;
+    padding: 5px;
     box-shadow: 1px 1px 2px;
     transition: 0.3s;
     width: 31%;
@@ -139,17 +137,16 @@ section.HubBox:before, section.HubBox:after{
     backdrop-filter: blur(2px);
     background-color: rgba(129, 129, 129, 0.4);
     color: white;
-    padding: 10px;
     box-sizing: border-box;
 }
 
 section.HubBox:before{
     content: "Titre";
     text-align: center;
-    font-size: 35px;
     font-weight: bold;
     border-radius: 0 5px 5px 0 ;
-    width: 45%;
+    width: 50%;
+    padding: 10px;
     top: 50px;left: 0;
     transform-origin: left;
     transform: scaleX(0);
@@ -161,9 +158,10 @@ section.HubBox:after{
     font-size: 15px;
     bottom: 0;left: 0;
     border-radius: 0 0 5px 5px;
-    box-shadow: black 0 -1px 5px;
+    box-shadow: black 0 -1px 4px;
+    padding: 20px;
     width: 100%;
-    height: 80px;
+    height: 100px;
     transform: scaleY(0);
     transform-origin: bottom;
 }
@@ -172,9 +170,42 @@ section.HubBox:hover:after, section.HubBox:hover:before{
     transform: scale(100%);
 }
 
+#cybersecurtie:before{
+    content: "La Cybérsécurité";
+}
+
+#it:before{
+    content: "L'IT";
+}
+
+#Blockchain:before{
+    content: "La BlockChain";
+}
+
+#analyse:before{
+    content: "Analyse";
+}
+
+#ia:before{
+    content: "L'inteligence Artificielle";
+}
+
+#join:before{
+    content: "Rejoins Nous";
+}
+
+#commerce:before{
+    content: "Le Commerce";
+}
+
+#cloud:before{
+    content: "Le Cloud";
+}
+
 section.HubBox img{
     width: 100%;
     border-radius: 5px;
+    margin: auto auto;
 }
 
 section.HubBox h2{
