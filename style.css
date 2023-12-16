@@ -7,6 +7,7 @@ body{
     height: auto;
     min-height: 100vh;
     margin: 0;
+    font-family: Arial, serif;
 }
 
 ::-webkit-scrollbar {
@@ -92,7 +93,7 @@ li::after {
 }
 
 li:hover::after{
-    transform: scaleX(1);
+    transform: scaleX(100%);
 }
 
 /*Menu burger*/
@@ -106,7 +107,7 @@ main{
     flex-direction: column;
     gap: 15px;
     padding: 10px 20px;
-    max-height: 100vw;
+    max-height: 90vw;
     align-content: center;
     margin: auto;
     transition: 0.3s;
@@ -124,82 +125,12 @@ section.HubBox{
     transition: 0.3s;
     width: 31%;
     position: relative;
+    display: flex;
     box-sizing: border-box;
 }
 
 section.HubBox:hover{
     transform: scale(101%);
-}
-
-section.HubBox:before, section.HubBox:after{
-    position: absolute;
-    transition: 0.4s;
-    backdrop-filter: blur(2px);
-    background-color: rgba(129, 129, 129, 0.4);
-    color: white;
-    box-sizing: border-box;
-}
-
-section.HubBox:before{
-    content: "Titre";
-    text-align: center;
-    font-weight: bold;
-    border-radius: 0 5px 5px 0 ;
-    width: 50%;
-    padding: 10px;
-    top: 50px;left: 0;
-    transform-origin: left;
-    transform: scaleX(0);
-    box-shadow: black 1px -1px 5px;
-}
-
-section.HubBox:after{
-    content: "petite desc";
-    font-size: 15px;
-    bottom: 0;left: 0;
-    border-radius: 0 0 5px 5px;
-    box-shadow: black 0 -1px 4px;
-    padding: 20px;
-    width: 100%;
-    height: 100px;
-    transform: scaleY(0);
-    transform-origin: bottom;
-}
-
-section.HubBox:hover:after, section.HubBox:hover:before{
-    transform: scale(100%);
-}
-
-#cybersecurtie:before{
-    content: "La Cybérsécurité";
-}
-
-#it:before{
-    content: "L'IT";
-}
-
-#Blockchain:before{
-    content: "La BlockChain";
-}
-
-#analyse:before{
-    content: "Analyse";
-}
-
-#ia:before{
-    content: "L'inteligence Artificielle";
-}
-
-#join:before{
-    content: "Rejoins Nous";
-}
-
-#commerce:before{
-    content: "Le Commerce";
-}
-
-#cloud:before{
-    content: "Le Cloud";
 }
 
 section.HubBox img{
@@ -209,11 +140,53 @@ section.HubBox img{
 }
 
 section.HubBox h2{
-    text-align: center;
-    margin: 5px;
-    font-size: 100%;
+    position: absolute;
+    background-color: rgba(238, 238, 238, 0.55);
+    box-shadow: 1px 1px 2px;
+    border-radius: 10px;
+    padding: 5px;
+    backdrop-filter: blur(2px);
+    top: 40px;
+    left: 30px;
+    margin: 0;
+    font-weight: bold;
 }
 
+section.HubBox p{
+    position: absolute;
+    bottom: 0;left: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    padding: 10px;
+    transition: 0.3s;
+    backdrop-filter: blur(2px);
+    background-color: rgba(238, 238, 238, 0.55);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    box-sizing: border-box;
+}
+
+section.HubBox p img{
+    position: absolute;
+    bottom: 10px; right: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 15px;
+    padding: 2px;
+    transition: 0.3s;
+}
+
+section.HubBox p img:hover{
+    background-color: rgba(213, 213, 213, 0.55);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+section.HubBox:hover p{
+    transform: scaleY(100%);
+}
 
 @media screen and (max-width: 650px) {
     main{
@@ -227,7 +200,7 @@ section.HubBox h2{
 
 @media screen and (max-width: 1300px) and (min-width: 650px) {
     main{
-        max-height: 200vw;
+        max-height: 180vw;
     }
 
     section.HubBox{
