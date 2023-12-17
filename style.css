@@ -30,7 +30,8 @@ background-color: rgba(123, 123, 123, 0.4);
 
 /*------------------Header----------------*/
 header{
-    background-color: rgb(230, 230, 230);
+    background-color: rgba(0, 81, 255, 0.2);
+    border: solid 1px black;
     height: auto;
     padding: 5px 20px;
     display: flex;
@@ -44,6 +45,12 @@ header h1{
 header img{
     width: 50px;
     height: 50px;
+    transition: 0.3s;
+}
+
+header img:hover{
+    transform: scale(105%);
+    transition: 0.3s;
 }
 
 header img.right{
@@ -117,11 +124,11 @@ main{
 
 /*Box*/
 section.HubBox{
-    background-color: rgb(230, 230, 230);
-    border: solid 1px gray;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border: solid 1px black;
     border-radius: 5px;
-    padding: 5px;
-    box-shadow: 1px 1px 2px;
+    padding: 10px;
     transition: 0.3s;
     width: 31%;
     position: relative;
@@ -136,7 +143,6 @@ section.HubBox:hover{
 section.HubBox img{
     width: 100%;
     border-radius: 5px;
-    margin: auto auto;
 }
 
 section.HubBox h2{
@@ -159,7 +165,7 @@ section.HubBox p{
     width: 100%;
     height: auto;
     min-height: 60px;
-    padding: 10px;
+    padding: 12px;
     transition: 0.3s;
     backdrop-filter: blur(2px);
     background-color: rgba(238, 238, 238, 0.55);
@@ -210,7 +216,8 @@ section.HubBox:hover p{
 
 /*Footer*/
 footer{
-    background-color: rgb(230, 230, 230);
+    background-color: rgba(0, 81, 255, 0.2);
+    border: solid 1px black;
     height: auto;
     padding: 5px 20px;
 }
