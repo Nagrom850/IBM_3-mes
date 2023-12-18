@@ -14,6 +14,7 @@ main {
   flex-direction: column;
   gap: 15px;
   padding: 10px 20px;
+  /*3 columns when the screen is large*/
   max-height: 90vw;
   align-content: center;
   margin: auto;
@@ -36,13 +37,16 @@ section.HubBox {
   box-sizing: border-box;
 }
 section.HubBox:hover {
+  /*upScale it when over*/
   transform: scale(101%);
 }
 section.HubBox img {
+  /*make the image take all the box*/
   width: 100%;
   border-radius: 5px;
 }
 section.HubBox h2 {
+  /*make the title attach to the image*/
   position: absolute;
   background-color: rgba(238, 238, 238, 0.55);
   box-shadow: 1px 1px 2px;
@@ -54,6 +58,7 @@ section.HubBox h2 {
   font-weight: bold;
 }
 section.HubBox p {
+  /*make the description attach to box*/
   position: absolute;
   bottom: 0;
   left: 0;
@@ -70,6 +75,7 @@ section.HubBox p {
   transform-origin: bottom;
 }
 section.HubBox p img {
+  /*make the little arrow*/
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -85,10 +91,12 @@ section.HubBox p img:hover {
   cursor: pointer;
 }
 section.HubBox:hover p {
+  /*make the description appear smoothly when hover*/
   transform: scaleY(100%);
 }
 
 @media screen and (max-width: 650px) {
+  /*Only one column when the screen is small*/
   main {
     max-height: 5000px;
   }
@@ -97,6 +105,7 @@ section.HubBox:hover p {
   }
 }
 @media screen and (max-width: 1300px) and (min-width: 650px) {
+  /*2 columns when the screen is medium*/
   main {
     max-height: 180vw;
   }
@@ -105,6 +114,7 @@ section.HubBox:hover p {
   }
 }
 header {
+  /*make the header style*/
   background-color: rgba(0, 81, 255, 0.2);
   border: solid 1px black;
   height: auto;
@@ -113,14 +123,17 @@ header {
   align-items: center;
 }
 header h1 {
+  /*put the title on the left of it*/
   margin: 0;
 }
 header img, header > a {
+  /*make the icon little and adjust to the header size*/
   width: 50px;
   height: 50px;
   transition: 0.3s;
 }
 header img:hover, header > a:hover {
+  /*upScale it when over*/
   transform: scale(105%);
 }
 
@@ -131,19 +144,21 @@ footer {
   padding: 5px 20px;
 }
 
-.open-btn {
+.open-btn, .close-btn {
+  /*disable burger menu icon when the screen is wide*/
   display: none;
 }
 
 nav {
+  /*nav for large screen*/
+  /*center the nav*/
   margin: auto auto;
 }
-nav .close-btn {
-  display: none;
-}
 nav ul {
+  /*make the link list look like somethings*/
   font-size: 20px;
   list-style-type: none;
+  /*adjust with the width of the screen*/
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -151,6 +166,7 @@ nav ul {
   justify-content: center;
 }
 nav li {
+  /*make the li look like clickable*/
   text-align: center;
   padding: 5px;
   border-radius: 15px;
@@ -163,6 +179,7 @@ nav li a {
   color: black;
 }
 nav li a::after {
+  /*create smoth underline*/
   content: "";
   position: absolute;
   bottom: 2px;
@@ -172,6 +189,7 @@ nav li a::after {
   background-color: black;
   opacity: 1;
   transform: scaleX(0);
+  /*origine from the center of the li*/
   transform-origin: center;
   transition: 0.2s;
 }
@@ -180,10 +198,13 @@ nav li a:hover::after {
 }
 
 @media screen and (max-width: 650px) {
+  /*make the burger nav when the screen is small*/
   header h1 {
+    /*make the title not attach to the burger icon*/
     margin-left: 20px;
   }
   header .right {
+    /*place search icon and flag icon to the right*/
     position: absolute;
   }
   header .right.n1 {
@@ -192,18 +213,20 @@ nav li a:hover::after {
   header .right.n2 {
     right: 50px;
   }
-  .open-btn {
+  .open-btn, .close-btn {
+    /*make the burger button visible*/
     display: block;
     float: left;
     margin: auto 0;
   }
   nav {
-    padding: 5px 20px;
+    /*attach the nav on the total screen*/
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    /*transition from the side of the screen*/
     transform: scaleX(0);
     opacity: 0;
     transition: 0.3s;
@@ -211,20 +234,15 @@ nav li a:hover::after {
     background-color: rgb(181, 181, 181);
     z-index: 1000;
   }
-  nav .close-btn {
-    display: block;
-  }
   nav.open {
     opacity: 1;
     transform: scaleX(100%);
   }
-  nav.open ~ .open-btn {
-    display: none;
-  }
   nav ul {
+    /*make the link list adjust for the burger*/
     gap: 25px;
     font-size: 5vw;
-    padding: 0;
+    padding: 60px 0;
     width: auto;
     display: block;
   }
@@ -241,11 +259,9 @@ nav li a:hover::after {
   border-radius: 10px;
   background-color: rgba(123, 123, 123, 0.4);
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
 }
-
 ::-webkit-scrollbar-thumb:active {
   background: rgba(255, 255, 255, 0.5);
 }/*# sourceMappingURL=hubPage.css.map */

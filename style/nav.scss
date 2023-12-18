@@ -1,17 +1,20 @@
-.open-btn{
+
+
+.open-btn, .close-btn{
+    /*disable burger menu icon when the screen is wide*/
     display: none;
 }
 
 nav{
-    .close-btn{
-        display: none;
-    }
-
+    /*nav for large screen*/
+    /*center the nav*/
     margin: auto auto;
-
+    
     ul{
+        /*make the link list look like somethings*/
         font-size: 20px;
         list-style-type: none;
+        /*adjust with the width of the screen*/
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
@@ -20,6 +23,7 @@ nav{
     }
 
     li{
+        /*make the li look like clickable*/
         text-align: center;
         padding: 5px;
         border-radius: 15px;
@@ -32,6 +36,7 @@ nav{
             color: black;
 
             &::after {
+                /*create smoth underline*/
                 content: '';
                 position: absolute;
                 bottom: 2px;left: 5%;
@@ -40,6 +45,7 @@ nav{
                 background-color: black;
                 opacity: 1;
                 transform: scaleX(0);
+                /*origine from the center of the li*/
                 transform-origin: center;
                 transition: 0.2s;
             }
@@ -51,14 +57,18 @@ nav{
     }
 }
 
-@media screen and (max-width:650px) {
-    header{
 
+@media screen and (max-width:650px) {
+    /*make the burger nav when the screen is small*/
+    header{
         h1{
+            /*make the title not attach to the burger icon*/
             margin-left: 20px;
         }
-
+    
+        
         .right{
+            /*place search icon and flag icon to the right*/
             position: absolute;
             &.n1{
                 right: 0px;
@@ -70,7 +80,8 @@ nav{
         }
     }
 
-    .open-btn{
+    .open-btn, .close-btn{
+        /*make the burger button visible*/
         display: block;
         float: left;
         margin: auto 0;
@@ -78,11 +89,12 @@ nav{
 
     
     nav{
-        padding: 5px 20px;
+        /*attach the nav on the total screen*/
         position: fixed;
         top: 0; left: 0;
         width: 100%;
         height: 100%;
+        /*transition from the side of the screen*/
         transform: scaleX(0);
         opacity: 0;
         transition: 0.3s;
@@ -90,22 +102,16 @@ nav{
         background-color: rgb(181, 181, 181);
         z-index: 1000;
 
-        .close-btn{
-            display: block;
-        }
-
         &.open{
-            ~.open-btn{
-                display: none;
-            }
             opacity: 1;
             transform: scaleX(100%);
         }
 
         ul{
+            /*make the link list adjust for the burger*/
             gap: 25px;
             font-size: 5vw;
-            padding: 0;
+            padding: 60px 0;
             width: auto;
             display: block;
         }
