@@ -52,8 +52,22 @@ nav{
 }
 
 @media screen and (max-width:650px) {
-    header h1{
-        margin-left: 20px;
+    header{
+
+        h1{
+            margin-left: 20px;
+        }
+
+        .right{
+            position: absolute;
+            &.n1{
+                right: 0px;
+            }
+    
+            &.n2{
+                right: 50px;
+            }
+        }
     }
 
     .open-btn{

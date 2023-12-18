@@ -123,9 +123,6 @@ header img, header > a {
 header img:hover, header > a:hover {
   transform: scale(105%);
 }
-header .right {
-  float: right;
-}
 
 footer {
   background-color: rgba(0, 81, 255, 0.2);
@@ -185,6 +182,15 @@ nav li a:hover::after {
 @media screen and (max-width: 650px) {
   header h1 {
     margin-left: 20px;
+  }
+  header .right {
+    position: absolute;
+  }
+  header .right.n1 {
+    right: 0px;
+  }
+  header .right.n2 {
+    right: 50px;
   }
   .open-btn {
     display: block;
