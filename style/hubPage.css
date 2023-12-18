@@ -125,7 +125,6 @@ header img:hover, header > a:hover {
 }
 header .right {
   float: right;
-  justify-self: end;
 }
 
 footer {
