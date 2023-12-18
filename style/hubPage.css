@@ -1,11 +1,9 @@
-html {
+html, body {
   height: auto;
   min-height: 100vh;
 }
 
 body {
-  height: auto;
-  min-height: 100vh;
   margin: 0;
   font-family: Arial, serif;
 }
@@ -61,16 +59,15 @@ section.HubBox p {
   left: 0;
   margin: 0;
   width: 100%;
-  height: auto;
+  box-sizing: border-box;
   min-height: 60px;
   padding: 12px;
-  transition: 0.3s;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   background-color: rgba(238, 238, 238, 0.55);
   transform: scaleY(0);
+  transition: 0.3s;
   transform-origin: bottom;
-  box-sizing: border-box;
 }
 section.HubBox p img {
   position: absolute;
@@ -114,26 +111,21 @@ header {
   padding: 5px 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-header > a {
-  width: 50px;
-  height: 50px;
 }
 header h1 {
   margin: 0;
 }
-header img {
+header img, header > a {
   width: 50px;
   height: 50px;
   transition: 0.3s;
 }
-header img:hover {
+header img:hover, header > a:hover {
   transform: scale(105%);
-  transition: 0.3s;
 }
-header img.right {
-  margin-left: auto;
+header .right {
+  float: right;
+  justify-self: end;
 }
 
 footer {
@@ -149,12 +141,12 @@ footer {
 
 nav {
   margin: auto auto;
-  transition: 0.3s;
 }
 nav .close-btn {
   display: none;
 }
 nav ul {
+  font-size: 20px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -197,32 +189,36 @@ nav li a:hover::after {
   }
   .open-btn {
     display: block;
-    float: right;
+    float: left;
     margin: auto 0;
   }
   nav {
+    padding: 5px 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     transform: scaleX(0);
+    opacity: 0;
+    transition: 0.3s;
     transform-origin: left;
     background-color: rgb(181, 181, 181);
     z-index: 1000;
   }
+  nav .close-btn {
+    display: block;
+  }
   nav.open {
+    opacity: 1;
     transform: scaleX(100%);
   }
   nav.open ~ .open-btn {
     display: none;
   }
-  nav.open .close-btn {
-    display: block;
-  }
   nav ul {
-    gap: 15px;
-    font-size: 27px;
+    gap: 25px;
+    font-size: 5vw;
     padding: 0;
     width: auto;
     display: block;

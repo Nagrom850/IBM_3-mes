@@ -8,9 +8,9 @@ nav{
     }
 
     margin: auto auto;
-    transition: 0.3s;
 
     ul{
+        font-size: 20px;
         list-style-type: none;
         display: flex;
         flex-wrap: wrap;
@@ -58,35 +58,39 @@ nav{
 
     .open-btn{
         display: block;
-        float: right;
+        float: left;
         margin: auto 0;
     }
 
+    
     nav{
+        padding: 5px 20px;
         position: fixed;
         top: 0; left: 0;
         width: 100%;
         height: 100%;
         transform: scaleX(0);
+        opacity: 0;
+        transition: 0.3s;
         transform-origin: left;
         background-color: rgb(181, 181, 181);
         z-index: 1000;
+
+        .close-btn{
+            display: block;
+        }
 
         &.open{
             ~.open-btn{
                 display: none;
             }
-
+            opacity: 1;
             transform: scaleX(100%);
-
-            .close-btn{
-                display: block;
-            }
         }
 
         ul{
-            gap: 15px;
-            font-size: 27px;
+            gap: 25px;
+            font-size: 5vw;
             padding: 0;
             width: auto;
             display: block;
