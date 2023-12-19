@@ -219,6 +219,9 @@ nav li a:hover::after {
     float: left;
     margin: auto 0;
   }
+  .close-btn {
+    margin: 5px 20px;
+  }
   nav {
     /*attach the nav on the total screen*/
     position: fixed;
