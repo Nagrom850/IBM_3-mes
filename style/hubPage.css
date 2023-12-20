@@ -155,9 +155,10 @@ nav {
   margin: auto auto;
 }
 nav ul {
+  list-style-type: none;
+  padding: 0;
   /*make the link list look like somethings*/
   font-size: 20px;
-  list-style-type: none;
   /*adjust with the width of the screen*/
   display: flex;
   flex-wrap: wrap;
@@ -178,7 +179,7 @@ nav li a {
   text-decoration: none;
   color: black;
 }
-nav li a::after {
+nav li.underline::after {
   /*create smoth underline*/
   content: "";
   position: absolute;
@@ -193,8 +194,36 @@ nav li a::after {
   transform-origin: center;
   transition: 0.2s;
 }
-nav li a:hover::after {
+nav li:hover.underline::after {
   transform: scaleX(100%);
+}
+nav li:hover div {
+  transform: scaleY(100%);
+}
+nav li div {
+  transform: scaleY(0);
+  background: transparent;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80%;
+  transform-origin: top;
+  transition: 0.2s;
+  position: absolute;
+  top: bottom;
+  left: 10%;
+  z-index: 1000;
+}
+nav li div:hover {
+  transform: scaleY(100%);
+}
+nav li div ul {
+  gap: 25px;
+  font-size: 20px;
+  padding: 10px;
+  width: auto;
+  display: block;
 }
 
 @media screen and (max-width: 650px) {
@@ -248,6 +277,14 @@ nav li a:hover::after {
     padding: 60px 0;
     width: auto;
     display: block;
+  }
+  nav ul li div {
+    position: relative;
+    height: 0;
+  }
+  nav ul li:hover div {
+    height: auto;
+    transition: 0.2s;
   }
 }
 ::-webkit-scrollbar {

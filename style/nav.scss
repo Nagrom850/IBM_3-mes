@@ -11,15 +11,17 @@ nav{
     margin: auto auto;
     
     ul{
+        list-style-type: none;
+        padding: 0;
         /*make the link list look like somethings*/
         font-size: 20px;
-        list-style-type: none;
         /*adjust with the width of the screen*/
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
         margin: auto;
         justify-content: center;
+    
     }
 
     li{
@@ -34,24 +36,56 @@ nav{
         a{
             text-decoration: none;
             color: black;
+        }
 
-            &::after {
-                /*create smoth underline*/
-                content: '';
-                position: absolute;
-                bottom: 2px;left: 5%;
-                width: 90%;
-                height: 2px;
-                background-color: black;
-                opacity: 1;
-                transform: scaleX(0);
-                /*origine from the center of the li*/
-                transform-origin: center;
-                transition: 0.2s;
+        &.underline::after {
+            /*create smoth underline*/
+            content: '';
+            position: absolute;
+            bottom: 2px;left: 5%;
+            width: 90%;
+            height: 2px;
+            background-color: black;
+            opacity: 1;
+            transform: scaleX(0);
+            /*origine from the center of the li*/
+            transform-origin: center;
+            transition: 0.2s;
+        }
+        
+        &:hover{
+            &.underline::after{
+                transform: scaleX(100%);
             }
             
-            &:hover::after{
-                transform: scaleX(100%);
+            div{
+                transform: scaleY(100%);
+            }
+        }
+
+        div{
+            transform: scaleY(0);
+            background: transparent;
+            backdrop-filter: blur(10px);
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 80%;
+            transform-origin: top;
+            transition: 0.2s;
+            position: absolute;
+            top: bottom;left: 10%;
+            z-index: 1000;
+
+            &:hover{
+                transform: scaleY(100%);
+            }
+
+            ul{
+                gap: 25px;
+                font-size: 20px;
+                padding: 10px;
+                width: auto;
+                display: block;
             }
         }
     }
@@ -117,7 +151,20 @@ nav{
             padding: 60px 0;
             width: auto;
             display: block;
+            
+            li{
+                div{
+                    position: relative;
+                    height: 0;
+                }
+
+                &:hover{
+                    div{
+                        height: auto;
+                        transition: 0.2s;
+                    } 
+                }
+            }
         }
     }
-
 }
