@@ -18,3 +18,4 @@ To run the IBM-like website locally, follow these steps:
 ## Usage
 
 Once the development server is running, you can access the IBM-for-14_years_old Website by opening your web browser and navigating to `http://localhost:3000`.
+
