@@ -38,29 +38,22 @@ nav{
             color: black;
         }
 
-        &.underline::after {
-            /*create smoth underline*/
-            content: '';
-            position: absolute;
-            bottom: 2px;left: 5%;
-            width: 90%;
-            height: 2px;
-            background-color: black;
-            opacity: 1;
-            transform: scaleX(0);
-            /*origine from the center of the li*/
-            transform-origin: center;
+        span{
+            display: inline-block;
+            font-weight: bold;
             transition: 0.2s;
         }
         
         &:hover{
-            &.underline::after{
-                transform: scaleX(100%);
-            }
             
             div{
                 transform: scaleY(100%);
             }
+
+            span{
+                transform: rotate(90deg);
+            }
+
         }
 
         div{
@@ -69,22 +62,22 @@ nav{
             backdrop-filter: blur(10px);
             border: 1px solid black;
             border-radius: 5px;
-            width: 80%;
+            width: fit-content;
             transform-origin: top;
             transition: 0.2s;
             position: absolute;
-            top: bottom;left: 10%;
+            top: bottom;left: 0;
             z-index: 1000;
 
-            &:hover{
-                transform: scaleY(100%);
+            &.tropGrand{
+                left: -20px;
             }
 
             ul{
                 gap: 25px;
                 font-size: 20px;
                 padding: 10px;
-                width: auto;
+                width: fit-content;
                 display: block;
             }
         }
@@ -156,6 +149,14 @@ nav{
                 div{
                     position: relative;
                     height: 0;
+                    transition: 0.2s;
+                    width: 90%;
+                    left: 5%;
+
+                    &.tropGrand{
+                        width: 90%;
+                        left: 5%;
+                    }
                 }
 
                 &:hover{

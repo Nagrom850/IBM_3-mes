@@ -179,26 +179,16 @@ nav li a {
   text-decoration: none;
   color: black;
 }
-nav li.underline::after {
-  /*create smoth underline*/
-  content: "";
-  position: absolute;
-  bottom: 2px;
-  left: 5%;
-  width: 90%;
-  height: 2px;
-  background-color: black;
-  opacity: 1;
-  transform: scaleX(0);
-  /*origine from the center of the li*/
-  transform-origin: center;
+nav li span {
+  display: inline-block;
+  font-weight: bold;
   transition: 0.2s;
-}
-nav li:hover.underline::after {
-  transform: scaleX(100%);
 }
 nav li:hover div {
   transform: scaleY(100%);
+}
+nav li:hover span {
+  transform: rotate(90deg);
 }
 nav li div {
   transform: scaleY(0);
@@ -207,22 +197,24 @@ nav li div {
           backdrop-filter: blur(10px);
   border: 1px solid black;
   border-radius: 5px;
-  width: 80%;
+  width: -moz-fit-content;
+  width: fit-content;
   transform-origin: top;
   transition: 0.2s;
   position: absolute;
   top: bottom;
-  left: 10%;
+  left: 0;
   z-index: 1000;
 }
-nav li div:hover {
-  transform: scaleY(100%);
+nav li div.tropGrand {
+  left: -20px;
 }
 nav li div ul {
   gap: 25px;
   font-size: 20px;
   padding: 10px;
-  width: auto;
+  width: -moz-fit-content;
+  width: fit-content;
   display: block;
 }
 
@@ -281,6 +273,13 @@ nav li div ul {
   nav ul li div {
     position: relative;
     height: 0;
+    transition: 0.2s;
+    width: 90%;
+    left: 5%;
+  }
+  nav ul li div.tropGrand {
+    width: 90%;
+    left: 5%;
   }
   nav ul li:hover div {
     height: auto;
@@ -304,4 +303,23 @@ nav li div ul {
 }
 ::-webkit-scrollbar-thumb:active {
   background: rgba(255, 255, 255, 0.5);
+}
+
+.underline::after {
+  /*create smoth underline*/
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background-color: black;
+  opacity: 1;
+  transform: scaleX(0);
+  /*origine from the center of the li*/
+  transform-origin: center;
+  transition: 0.2s;
+}
+.underline:hover::after {
+  transform: scaleX(100%);
 }/*# sourceMappingURL=hubPage.css.map */
