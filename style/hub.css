@@ -33,7 +33,6 @@ section.HubBox {
   transition: 0.3s;
   width: 31%;
   position: relative;
-  display: flex;
   box-sizing: border-box;
 }
 section.HubBox:hover {
