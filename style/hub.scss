@@ -38,18 +38,22 @@ section.HubBox{
     width: 31%;
     position: relative;
     box-sizing: border-box;
-  
-    &:hover{
-        /*upScale it when over*/
-        transform: scale(101%);
-    }
+
    
     img{
         /*make the image take all the box*/
         width: 100%;
         border-radius: 5px;
+
+        &:hover{
+            /*make the image darker when hover*/
+            filter: brightness(0.8);
+            transition: $transition-time;
+            transform: scale(101%);
+
+        }
+
     }
-      
     h2{
         /*make the title attach to the image*/
         position: absolute;
@@ -57,7 +61,20 @@ section.HubBox{
         box-shadow: 1px 1px 2px;
         border-radius: 10px;
         padding: 5px;
-        top: 40px;left: 30px;
+        top: 20px;left: 20px;
+        font-size: calc(100% + 1vw);
+        margin: 0;
+        font-weight: bold;
+    }
+    h2{
+        /*make the title attach to the image*/
+        position: absolute;
+        background-color: $light-gray;
+        box-shadow: 1px 1px 2px;
+        border-radius: 10px;
+        padding: 5px;
+        top: 20px;left: 20px;
+        font-size: 100%;
         margin: 0;
         font-weight: bold;
     }
@@ -72,7 +89,7 @@ section.HubBox{
         min-height: 60px;
         padding: 12px;
         backdrop-filter: blur(5px);
-        background-color: rgba(238, 238, 238, 0.55);
+        background-color: $light-gray;
         transform: scaleY(0);
         transition: $transition-time;
         transform-origin: bottom;
@@ -88,8 +105,9 @@ section.HubBox{
             transition: $transition-time;
 
             &:hover{
-                background-color: rgba(213, 213, 213, 0.55);
+                background-color: $hover-gray;
                 transition: $transition-time;
+
                 cursor: pointer;
             }
         }

@@ -22,6 +22,10 @@ header img:hover, header > a:hover {
   transform: scale(105%);
 }
 
+.title {
+  text-align: center;
+}
+
 footer {
   background-color: rgba(0, 81, 255, 0.2);
   border: solid 1px black;
@@ -229,6 +233,7 @@ div {
 
 #courte_bio {
   width: 172px;
+  min-height: 80px;
 }
 
 select {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candidature</title>
+    <title>IBM pour les 3èmes</title>
     <link rel="stylesheet" href="../general_styles/candidaturepage.css">
 </head>
 <body>
@@ -48,22 +48,22 @@
                     </div>
                 </li>
             </ul>
-            <script src="scripts/burger.js"></script>
+            <script src="../scripts/burger.js"></script>
         </nav>
         <img class="right n2" src="../Images/flag.png" alt="petit-drapeau">
         <a href="index.html" class="right n1"><img src="../Images/home.png" alt="home" class="right"></a>
     </header>
-
+    <h1 class="title">Candidature</h1>
     <form method="post" action="traitement.php">
         <h1>Vous connaître</h1>
       <div>
         <label for="nom">Nom :</label>
-        <input id="nom" type="text" name="nom" placeholder="votre nom">
+        <input id="nom" type="text" name="nom" placeholder="votre nom" required>
       </div>
 
       <div>
-        <label for="mdp">Mot de passe</label>
-        <input id="mdp" type="password" name="mdp" placeholder="votre mot de passe" required>
+        <label for="prenom">Prénom :</label>
+        <input id="prenom" type="text" name="prenom" placeholder="votre prénom" required>
       </div>
 
       <div>
@@ -146,7 +146,7 @@
     </form>
 
     <footer>
-        <!-- Footer content here -->
+        <h3>Contact</h3>
     </footer>
     <script src="../scripts/spawn_page.js"></script>
 
