@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidature</title>
+    <link rel="stylesheet" href="../general_styles/candidaturepage.css">
+</head>
+<body>
+    <header>
+        <a href="" class="open-btn"><img src="../../Images/open-btn.png" alt="Open"></a> <!-- burger logo -->
+        <h1>IMB</h1>
+        <nav>
+            <a href="" class="close-btn"><img src="../Images/close-btn.png" alt="Close"></a> <!-- burger close logo -->
+            <ul>
+                <li class="underline"><a href="candidature.html">Candidature</a></li>
+                <li class="underline">
+                    <a href="activity.html">Activité de l'Entreprise</a>
+                </li>
+                <li>
+                    <a href="produit.html">Produits & Services</a>
+                    <span>></span>
+                    <div>
+                        <ul>
+                            <li class="underline"><a href="">Cloud</a></li>
+                            <li class="underline"><a href="underline">Cybérsécurité</a></li>
+                            <li class="underline"><a href="underline">Analyse de Donnée</a></li>
+                            <li class="underline"><a href="underline">Inteligence Artificielle</a></li>
+                            <li class="underline"><a href="underline">BlockChain</a></li>
+                            <li class="underline"><a href="underline">Commerce Eléctronique</a></li>
+                            <li class="underline"><a href="underline">Infrastructure It</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="Propos.html">A Propos</a>
+                    <span>></span>
+                    <div class="tropGrand">
+                        <ul>
+                            <li class="underline"><a href="">Cloud</a></li>
+                            <li class="underline"><a href="underline">Organisation</a></li>
+                            <li class="underline"><a href="underline">Concurents</a></li>
+                            <li class="underline"><a href="underline">Clients</a></li>
+                            <li class="underline"><a href="underline">Financement</a></li>
+                            <li class="underline"><a href="underline">Stratégie</a></li>
+                            <li class="underline"><a href="underline">Nos Valeurs</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <script src="scripts/burger.js"></script>
+        </nav>
+        <img class="right n2" src="../Images/flag.png" alt="petit-drapeau">
+        <a href="index.html" class="right n1"><img src="../Images/home.png" alt="home" class="right"></a>
+    </header>
+
+    <form method="post" action="traitement.php">
+        <h1>Vous connaître</h1>
+      <div>
+        <label for="nom">Nom :</label>
+        <input id="nom" type="text" name="nom" placeholder="votre nom">
+      </div>
+
+      <div>
+        <label for="mdp">Mot de passe</label>
+        <input id="mdp" type="password" name="mdp" placeholder="votre mot de passe" required>
+      </div>
+
+      <div>
+        <label for="email">E-mail :</label>
+        <input id="email" type="email" name="email" placeholder="votre adresse mail" required>
+      </div>
+
+      <div>
+        <label for="courte_bio">Coute Bio</label>
+        <textarea id="courte_bio" type="text" name="courte_bio" placeholder="une courte bio" required></textarea>
+      </div>
+
+        <div>
+          <label for="animal">Votre animal de compagnie :</label>
+          <select id="animal" name="animal">
+            <optgroup label="Chien">
+              <option value="le boxer">boxer</option>
+              <option value="le berger allemand">berger allemand</option>
+              <option value="le labrador" selected>labrador</option>
+            </optgroup>
+            <optgroup label="Chat">
+              <option value="le chat persan">persan</option>
+              <option value="le chat siamois">siamois</option>
+            </optgroup>
+          </select>
+        </div>
+
+
+
+      <fieldset>
+        <legend>Quel fruit est votre préféré ?</legend> <!-- Titre du fieldset -->
+
+          <label for="fruit1">
+            <input id="fruit1" type="radio" name="fruit" value="pomme" checked>
+            Pomme
+          </label>
+
+          <label for="fruit2">
+            <input id="fruit2" type="radio" name="fruit" value="poire" checked>
+            Poire
+          </label>
+
+          <label for="fruit3">
+            <input id="fruit3" type="radio" name="fruit" value="peche" checked>
+            Pêche
+          </label>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Choisir les fleurs que vous aimez</legend> <!-- Titre du fieldset -->
+
+          <label for="fleur1">
+            <input id="fleur1" type="checkbox" name="fleur" value="rose">
+            Rose
+          </label>
+
+          <label for="fruit2">
+            <input id="fleur2" type="checkbox" name="fleur" value="tulipe">
+            Tulipe
+          </label>
+
+          <label for="fruit3">
+            <input id="fleur3" type="checkbox" name="fleur" value="daphlias">
+            Daphlias
+          </label>
+
+
+          <label for="fruit4">
+            <input id="fruit4" type="checkbox" name="fleur" value="coquelicot">
+            Coquelicots
+          </label>
+
+      </fieldset>
+
+      <p>
+        <input type="submit" value="Envoyez">
+      </p>
+
+    </form>
+
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+    <script src="../scripts/spawn_page.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+html, body {
+  height: auto;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, serif;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 10px;
+  /*3 columns when the screen is large*/
+  max-height: 90vw;
+  align-content: center;
+  margin: auto;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+/*Box*/
+section.HubBox {
+  background-color: rgb(245, 245, 245);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: solid 1px black;
+  padding: 5px;
+  transition: 0.3s;
+  width: 31%;
+  position: relative;
+  box-sizing: border-box;
+}
+section.HubBox:hover {
+  /*upScale it when over*/
+  transform: scale(101%);
+}
+section.HubBox img {
+  /*make the image take all the box*/
+  width: 100%;
+  border-radius: 5px;
+}
+section.HubBox h2 {
+  /*make the title attach to the image*/
+  position: absolute;
+  background-color: rgba(238, 238, 238, 0.55);
+  box-shadow: 1px 1px 2px;
+  border-radius: 10px;
+  padding: 5px;
+  top: 40px;
+  left: 30px;
+  margin: 0;
+  font-weight: bold;
+}
+section.HubBox p {
+  /*make the description attach to box*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 60px;
+  padding: 12px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(238, 238, 238, 0.55);
+  transform: scaleY(0);
+  transition: 0.3s;
+  transform-origin: bottom;
+}
+section.HubBox p img {
+  /*make the little arrow*/
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 15px;
+  padding: 2px;
+  transition: 0.3s;
+}
+section.HubBox p img:hover {
+  background-color: rgba(213, 213, 213, 0.55);
+  transition: 0.3s;
+  cursor: pointer;
+}
+section.HubBox:hover p {
+  /*make the description appear smoothly when hover*/
+  transform: scaleY(100%);
+}
+
+@media screen and (max-width: 650px) {
+  /*Only one column when the screen is small*/
+  main {
+    max-height: 5000px;
+  }
+  section.HubBox {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 1300px) and (min-width: 650px) {
+  /*2 columns when the screen is medium*/
+  main {
+    max-height: 180vw;
+  }
+  section.HubBox {
+    width: 47%;
+  }
+}
+header {
+  /*make the header style*/
+  background-color: rgb(224, 224, 224);
+  border: solid 1px black;
+  height: auto;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  /*put the title on the left of it*/
+  margin: 0;
+}
+header img, header > a {
+  /*make the icon little and adjust to the header size*/
+  width: 50px;
+  height: 50px;
+  transition: 0.3s;
+}
+header img:hover, header > a:hover {
+  /*upScale it when over*/
+  transform: scale(105%);
+}
+
+footer {
+  background-color: rgba(0, 81, 255, 0.2);
+  border: solid 1px black;
+  height: auto;
+  padding: 5px 20px;
+}
+
+.open-btn, .close-btn {
+  /*disable burger menu icon when the screen is wide*/
+  display: none;
+}
+
+nav {
+  /*nav for large screen*/
+  /*center the nav*/
+  margin: auto auto;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  /*make the link list look like somethings*/
+  font-size: 20px;
+  /*adjust with the width of the screen*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: auto;
+  justify-content: center;
+}
+nav li {
+  /*make the li look like clickable*/
+  text-align: center;
+  padding: 5px;
+  border-radius: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+nav li a {
+  text-decoration: none;
+  color: black;
+}
+nav li span {
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.2s;
+}
+nav li:hover div {
+  transform: scaleY(100%);
+}
+nav li:hover span {
+  transform: rotate(90deg);
+}
+nav li div {
+  transform: scaleY(0);
+  background: rgb(224, 224, 224);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid black;
+  border-radius: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform-origin: top;
+  transition: 0.2s;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 1000;
+}
+nav li div.tropGrand {
+  left: -20px;
+}
+nav li div ul {
+  gap: 25px;
+  font-size: 20px;
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  /*make the burger nav when the screen is small*/
+  header h1 {
+    /*make the title not attach to the burger icon*/
+    margin-left: 20px;
+  }
+  header .right {
+    /*place search icon and flag icon to the right*/
+    position: absolute;
+  }
+  header .right.n1 {
+    right: 0px;
+  }
+  header .right.n2 {
+    right: 50px;
+  }
+  .open-btn, .close-btn {
+    /*make the burger button visible*/
+    display: block;
+    float: left;
+    margin: auto 0;
+  }
+  .close-btn {
+    margin: 5px 20px;
+  }
+  nav {
+    /*attach the nav on the total screen*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*transition from the side of the screen*/
+    transform: scaleX(0);
+    opacity: 0;
+    transition: 0.3s;
+    transform-origin: left;
+    background-color: rgb(224, 224, 224);
+    z-index: 1000;
+  }
+  nav.open {
+    opacity: 1;
+    transform: scaleX(100%);
+  }
+  nav ul {
+    /*make the link list adjust for the burger*/
+    gap: 25px;
+    font-size: 5vw;
+    padding: 60px 0;
+    width: auto;
+    display: block;
+  }
+  nav ul li div {
+    position: relative;
+    height: 0;
+    transition: 0.2s;
+    width: 90%;
+    left: 5%;
+    top: 0;
+  }
+  nav ul li div.tropGrand {
+    width: 90%;
+    left: 5%;
+  }
+  nav ul li:hover div {
+    height: auto;
+    transition: 0.2s;
+  }
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(34, 34, 34);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(123, 123, 123, 0.4);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.underline::after {
+  /*create smoth underline*/
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background-color: black;
+  opacity: 1;
+  transform: scaleX(0);
+  /*origine from the center of the li*/
+  transform-origin: center;
+  transition: 0.2s;
+}
+.underline:hover::after {
+  transform: scaleX(100%);
+}/*# sourceMappingURL=hubPage.css.map */
