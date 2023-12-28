@@ -8,6 +8,7 @@ body {
   font-family: Arial, serif;
   opacity: 0;
   transition: opacity 0.5s;
+  background-color: rgb(197, 219, 238);
 }
 
 main {
@@ -21,6 +22,7 @@ main {
   margin: auto;
   transition: 0.3s;
   box-sizing: border-box;
+  gap: 20px;
 }
 
 /*Box*/
@@ -34,6 +36,7 @@ section.HubBox {
   width: 31%;
   position: relative;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 section.HubBox img {
   /*make the image take all the box*/
@@ -157,7 +160,7 @@ header img:hover, header > a:hover {
 }
 
 footer {
-  background-color: rgba(0, 81, 255, 0.2);
+  background-color: rgba(238, 238, 238, 0.55);
   border: solid 1px black;
   height: auto;
   padding: 5px 20px;

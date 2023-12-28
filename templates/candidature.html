@@ -72,72 +72,34 @@
       </div>
 
       <div>
-        <label for="courte_bio">Coute Bio</label>
-        <textarea id="courte_bio" type="text" name="courte_bio" placeholder="une courte bio" required></textarea>
+        <label for="telephone">Téléphone :</label>
+        <input id="telephone" type="tel" name="telephone" placeholder="votre numéro de téléphone (optionnel)">
+      </div>
+
+      <div>
+        <label for="courte_bio">Vos Motivations</label>
+        <textarea id="courte_bio" type="text" name="courte_bio" placeholder="J'aimerai faire un stage ici car..."></textarea>
       </div>
 
         <div>
-          <label for="animal">Votre animal de compagnie :</label>
-          <select id="animal" name="animal">
-            <optgroup label="Chien">
-              <option value="le boxer">boxer</option>
-              <option value="le berger allemand">berger allemand</option>
-              <option value="le labrador" selected>labrador</option>
+          <label for="pays">Votre pays :</label>
+          <select id="pays" name="pays">
+            <optgroup label="Europe">
+              <option value="allemagne">Allemagne</option>
+              <option value="engleterre">Engleterre</option>
+              <option value="france" selected>France</option>
             </optgroup>
-            <optgroup label="Chat">
-              <option value="le chat persan">persan</option>
-              <option value="le chat siamois">siamois</option>
+            <optgroup label="Amériques">
+              <option value="etats-unis">Etats Unis</option>
+              <option value="canada">Canada</option>
             </optgroup>
           </select>
         </div>
 
-
-
-      <fieldset>
-        <legend>Quel fruit est votre préféré ?</legend> <!-- Titre du fieldset -->
-
-          <label for="fruit1">
-            <input id="fruit1" type="radio" name="fruit" value="pomme" checked>
-            Pomme
-          </label>
-
-          <label for="fruit2">
-            <input id="fruit2" type="radio" name="fruit" value="poire" checked>
-            Poire
-          </label>
-
-          <label for="fruit3">
-            <input id="fruit3" type="radio" name="fruit" value="peche" checked>
-            Pêche
-          </label>
-
-      </fieldset>
-
-      <fieldset>
-        <legend>Choisir les fleurs que vous aimez</legend> <!-- Titre du fieldset -->
-
-          <label for="fleur1">
-            <input id="fleur1" type="checkbox" name="fleur" value="rose">
-            Rose
-          </label>
-
-          <label for="fruit2">
-            <input id="fleur2" type="checkbox" name="fleur" value="tulipe">
-            Tulipe
-          </label>
-
-          <label for="fruit3">
-            <input id="fleur3" type="checkbox" name="fleur" value="daphlias">
-            Daphlias
-          </label>
-
-
-          <label for="fruit4">
-            <input id="fruit4" type="checkbox" name="fleur" value="coquelicot">
-            Coquelicots
-          </label>
-
-      </fieldset>
+      <div>
+        <label for="adresse">Adresse :</label>
+        <textarea id="adresse" type="text" name="adresse" placeholder="votre adresse" required></textarea>
+      </div>
 
       <p>
         <input type="submit" value="Envoyez">

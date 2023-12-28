@@ -27,7 +27,7 @@ header img:hover, header > a:hover {
 }
 
 footer {
-  background-color: rgba(0, 81, 255, 0.2);
+  background-color: rgba(238, 238, 238, 0.55);
   border: solid 1px black;
   height: auto;
   padding: 5px 20px;
@@ -222,6 +222,7 @@ form {
   width: 80%;
   max-width: 500px;
   margin: auto;
+  margin-top: 100px;
 }
 
 div {
@@ -232,7 +233,6 @@ div {
 }
 
 #courte_bio {
-  width: 172px;
   min-height: 80px;
 }
 
@@ -311,4 +311,5 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: rgb(197, 219, 238);
 }/*# sourceMappingURL=candidaturepage.css.map */
