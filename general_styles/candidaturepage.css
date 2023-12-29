@@ -7,10 +7,6 @@ header {
   display: flex;
   align-items: center;
 }
-header h1 {
-  /*put the title on the left of it*/
-  margin: 0;
-}
 header img, header > a {
   /*make the icon little and adjust to the header size*/
   width: 50px;
@@ -20,6 +16,13 @@ header img, header > a {
 header img:hover, header > a:hover {
   /*upScale it when over*/
   transform: scale(105%);
+}
+header .imb_button {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .title {
@@ -311,5 +314,5 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgb(197, 219, 238);
+  background-color: white;
 }/*# sourceMappingURL=candidaturepage.css.map */

@@ -7,10 +7,6 @@ header {
   display: flex;
   align-items: center;
 }
-header h1 {
-  /*put the title on the left of it*/
-  margin: 0;
-}
 header img, header > a {
   /*make the icon little and adjust to the header size*/
   width: 50px;
@@ -20,6 +16,13 @@ header img, header > a {
 header img:hover, header > a:hover {
   /*upScale it when over*/
   transform: scale(105%);
+}
+header .imb_button {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .title {
@@ -227,5 +230,51 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgb(197, 219, 238);
+  background-color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main div {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main div section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+main div section:nbt-child(even) {
+  flex-wrap: wrap-reverse;
+}
+main div section > * {
+  flex-basis: 49%;
+  box-sizing: border-box;
+}
+main div section .images {
+  display: flex;
+  flex-direction: row;
+  justify-content: top;
+  align-items: top;
+}
+main div section .images div {
+  display: flex;
+  flex-direction: column;
+  width: 47%;
+}
+main div section .images div img {
+  width: 100%;
+  border: 1px solid black;
+}
+main div section .images img {
+  width: 53%;
+  border: 1px solid black;
 }/*# sourceMappingURL=activityPage.css.map */
