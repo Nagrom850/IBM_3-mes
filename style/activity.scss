@@ -20,21 +20,23 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 
-    div {
+    .main_div {
         width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 20px;
 
         section{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-    
-            &:nbt-child(even){
+
+            &:nth-child(even) {
                 flex-wrap: wrap-reverse;
             }
             
@@ -46,7 +48,7 @@ main{
             .images{
                 display: flex;
                 flex-direction: row;
-                justify-content: top;
+                justify-content: center;
                 align-items: top;
         
                 div{
@@ -68,11 +70,15 @@ main{
                 }
         
             }
+
+            .texte{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
      
         }
 
     }
-
- 
 
 }
