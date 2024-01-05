@@ -7,10 +7,6 @@ header{
     display: flex;
     align-items: center;
 
-    h1{
-        /*put the title on the left of it*/
-        margin: 0;
-    }
 
     img, >a{
         /*make the icon little and adjust to the header size*/
@@ -24,7 +20,19 @@ header{
         }
     }
 
+    .imb_button{
+        text-decoration: none;
+        color: black;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
     
+}
+
+.title{
+    text-align: center;
 }
 
 
