@@ -14,6 +14,12 @@
         transition: 0.2s;
     }
 
+    &.open{
+        &::after{
+            transform: scaleX(100%);
+        }
+    }
+    
     &:hover{
         &::after{
             transform: scaleX(100%);

@@ -13,7 +13,7 @@
         <nav>
             <a href="" class="close-btn"><img src="../Images/Navigation/close-btn.png" alt="Close"></a> <!-- burger close logo -->
             <ul>
-                <li class="underline"><a href="candidature.html">Candidature</a></li>
+                <li class="underline open"><a href="candidature.html">Candidature</a></li>
                 <li class="underline">
                     <a href="activity.html">Activité de l'Entreprise</a>
                 </li>
@@ -53,57 +53,39 @@
         <img class="right n2" src="../Images/Navigation/flag.png" alt="petit-drapeau">
         <a href="index.html" class="right n1"><img src="../Images/Navigation/home.png" alt="home" class="right"></a>
     </header>
-    <h1 class="title">Candidature</h1>
     <form method="post" action="traitement.php">
-        <h1>Vous connaître</h1>
-      <div>
-        <label for="nom">Nom :</label>
-        <input id="nom" type="text" name="nom" placeholder="votre nom" required>
+      <h1 class="title">Candidature</h1>
+      <div class="cotecote">
+        <input id="nom" type="text" name="nom" placeholder="Nom" required>
+        <input id="prenom" type="text" name="prenom" placeholder="Prénom" required>
+      </div>  
+
+      <input id="email" type="email" name="email" placeholder="Email" required>
+
+      <div class="cotecote">
+        <input id="telephone" type="tel" name="telephone" placeholder="Téléphone (optionnel)">
+        
+        <select id="pays" name="pays">
+          <optgroup label="Europe">
+            <option value="allemagne">Allemagne</option>
+            <option value="engleterre">Engleterre</option>
+            <option value="france" selected>France</option>
+          </optgroup>
+          <optgroup label="Amériques">
+            <option value="etats-unis">Etats Unis</option>
+            <option value="canada">Canada</option>
+          </optgroup>
+        </select>
+  
       </div>
+      <textarea id="adresse" type="text" name="adresse" placeholder="Adresse" required></textarea>
+      
+      <textarea id="courte_bio" type="text" name="courte_bio" placeholder="J'aimerai faire un stage ici car..."></textarea>
 
-      <div>
-        <label for="prenom">Prénom :</label>
-        <input id="prenom" type="text" name="prenom" placeholder="votre prénom" required>
-      </div>
+      <input id="dispo" name="dispo" type="text" placeholder="Date souhaité (MM/DD/YYYY)"
+        onfocus="(this.type='date')">
 
-      <div>
-        <label for="email">E-mail :</label>
-        <input id="email" type="email" name="email" placeholder="votre adresse mail" required>
-      </div>
-
-      <div>
-        <label for="telephone">Téléphone :</label>
-        <input id="telephone" type="tel" name="telephone" placeholder="votre numéro de téléphone (optionnel)">
-      </div>
-
-      <div>
-        <label for="courte_bio">Vos Motivations</label>
-        <textarea id="courte_bio" type="text" name="courte_bio" placeholder="J'aimerai faire un stage ici car..."></textarea>
-      </div>
-
-        <div>
-          <label for="pays">Votre pays :</label>
-          <select id="pays" name="pays">
-            <optgroup label="Europe">
-              <option value="allemagne">Allemagne</option>
-              <option value="engleterre">Engleterre</option>
-              <option value="france" selected>France</option>
-            </optgroup>
-            <optgroup label="Amériques">
-              <option value="etats-unis">Etats Unis</option>
-              <option value="canada">Canada</option>
-            </optgroup>
-          </select>
-        </div>
-
-      <div>
-        <label for="adresse">Adresse :</label>
-        <textarea id="adresse" type="text" name="adresse" placeholder="votre adresse" required></textarea>
-      </div>
-
-      <p>
-        <input type="submit" value="Envoyez">
-      </p>
+      <input type="submit" value="Envoyez">
 
     </form>
 
