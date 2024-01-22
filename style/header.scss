@@ -3,9 +3,14 @@ header{
     background-color: rgb(224, 224, 224);
     border: solid 1px black;
     height: auto;
+    width: 100%;
+    box-sizing: border-box;
     padding: 5px 20px;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0; left: 0;
+    z-index: 1000;
 
     a{
         text-decoration: none;
@@ -53,7 +58,7 @@ header{
         transform-origin: top;
         transition: 0.2s;
         position: absolute;
-        top: 30px;left: 0;
+        top: 101%;left: 0;
         z-index: 1000;
 
         &.tropGrand{

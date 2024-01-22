@@ -32,7 +32,7 @@ nav{
         transition: 0.3s;
         cursor: pointer;
         position: relative;
-
+        height: auto;
         a{
             text-decoration: none;
             color: black;
@@ -63,6 +63,7 @@ nav{
 @media screen and (max-width:650px) {
     /*make the burger nav when the screen is small*/
     header{
+
         h1{
             /*make the title not attach to the burger icon*/
             margin-left: 20px;
@@ -121,22 +122,25 @@ nav{
             display: block;
             
             li{
-                div{
-                    position: relative;
-                    height: 0;
+                div.deroulant{
+                    height: auto;
                     transition: 0.2s;
                     width: 90%;
-                    left: 5%;top:0;
+                    left: 5%; top:101%;
+                    transform: scaleY(0);
+                    transform-origin: top;
+                    border-radius: 0;
+                    border: none;
+                    border-top: 3px black solid;
 
                     &.tropGrand{
-                        width: 90%;
                         left: 5%;
                     }
                 }
 
                 &:hover{
                     div{
-                        height: auto;
+                        transform: scaleY(100%);
                         transition: 0.2s;
                     } 
                 }

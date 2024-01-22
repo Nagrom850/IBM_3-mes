@@ -6,6 +6,13 @@ header {
   padding: 5px 20px;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+header a {
+  text-decoration: none;
+  color: black;
 }
 header img, header > a {
   /*make the icon little and adjust to the header size*/
@@ -23,6 +30,47 @@ header .imb_button {
   margin: 0;
   display: flex;
   align-items: center;
+}
+header .n2 {
+  position: relative;
+  cursor: pointer;
+}
+header .n2:hover div.deroulant {
+  transform: scaleY(100%);
+}
+header div.deroulant {
+  transform: scaleY(0);
+  background: rgb(224, 224, 224);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid black;
+  border-radius: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform-origin: top;
+  transition: 0.2s;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 1000;
+}
+header div.deroulant.tropGrand {
+  left: -20px;
+}
+header div.deroulant.drapeau {
+  left: -30px;
+}
+header div.deroulant ul {
+  gap: 25px;
+  font-size: 20px;
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  list-style: none;
+}
+header div.deroulant:hover {
+  transform: scaleY(100%);
 }
 
 .title {
@@ -76,38 +124,11 @@ nav li span {
   font-weight: bold;
   transition: 0.2s;
 }
-nav li:hover div {
+nav li:hover div.deroulant {
   transform: scaleY(100%);
 }
 nav li:hover span {
   transform: rotate(90deg);
-}
-nav li div {
-  transform: scaleY(0);
-  background: rgb(224, 224, 224);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border: 1px solid black;
-  border-radius: 5px;
-  width: -moz-fit-content;
-  width: fit-content;
-  transform-origin: top;
-  transition: 0.2s;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  z-index: 1000;
-}
-nav li div.tropGrand {
-  left: -20px;
-}
-nav li div ul {
-  gap: 25px;
-  font-size: 20px;
-  padding: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: block;
 }
 
 @media screen and (max-width: 650px) {
@@ -226,14 +247,10 @@ form {
   gap: 20px;
   width: 80%;
   max-width: 500px;
-<<<<<<< HEAD
   margin: 20px auto;
   margin-top: 0;
   align-items: center;
   justify-content: center;
-=======
-  margin: auto;
->>>>>>> e2f4bd990d85572aad9a0a2fda2b577ea5dac3db
 }
 
 input,
