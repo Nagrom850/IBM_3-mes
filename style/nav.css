@@ -38,36 +38,42 @@ nav li span {
   font-weight: bold;
   transition: 0.2s;
 }
-nav li:hover div {
+nav li:hover div.deroulant {
   transform: scaleY(100%);
 }
 nav li:hover span {
   transform: rotate(90deg);
 }
-nav li div {
+
+div.deroulant {
   transform: scaleY(0);
-  background: transparent;
+  background: rgb(224, 224, 224);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border: 1px solid black;
   border-radius: 5px;
-  width: 100vw;
+  width: -moz-fit-content;
+  width: fit-content;
   transform-origin: top;
   transition: 0.2s;
   position: absolute;
-  top: bottom;
+  top: 30px;
+  left: 0;
   z-index: 1000;
 }
-nav li div.tropGrand {
+div.deroulant.tropGrand {
   left: -20px;
 }
-nav li div ul {
+div.deroulant ul {
   gap: 25px;
   font-size: 20px;
   padding: 10px;
   width: -moz-fit-content;
   width: fit-content;
   display: block;
+}
+div.deroulant:hover {
+  transform: scaleY(100%);
 }
 
 @media screen and (max-width: 650px) {
@@ -107,7 +113,7 @@ nav li div ul {
     opacity: 0;
     transition: 0.3s;
     transform-origin: left;
-    background-color: rgb(181, 181, 181);
+    background-color: rgb(224, 224, 224);
     z-index: 1000;
   }
   nav.open {
@@ -128,6 +134,7 @@ nav li div ul {
     transition: 0.2s;
     width: 90%;
     left: 5%;
+    top: 0;
   }
   nav ul li div.tropGrand {
     width: 90%;

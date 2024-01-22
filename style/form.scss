@@ -1,7 +1,7 @@
 form{
   display:flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   width: 80%;
   max-width: 500px;
   margin: 20px auto;
@@ -19,6 +19,7 @@ select {
   height: 30px;
   border-bottom: solid 2px black;
   padding: 0;
+  box-sizing: border-box;
 }
 
 select{

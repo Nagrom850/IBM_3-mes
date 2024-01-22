@@ -7,6 +7,10 @@ header{
     display: flex;
     align-items: center;
 
+    a{
+        text-decoration: none;
+        color: black;
+    }
 
     img, >a{
         /*make the icon little and adjust to the header size*/
@@ -26,6 +30,52 @@ header{
         margin: 0;
         display: flex;
         align-items: center;
+    }
+
+    .n2{
+        position: relative;
+        cursor: pointer;
+
+        &:hover{
+            div.deroulant{
+                transform: scaleY(100%);
+            }
+        }
+    }
+
+    div.deroulant{
+        transform: scaleY(0);
+        background: rgb(224, 224, 224);
+        backdrop-filter: blur(10px);
+        border: 1px solid black;
+        border-radius: 5px;
+        width: fit-content;
+        transform-origin: top;
+        transition: 0.2s;
+        position: absolute;
+        top: 30px;left: 0;
+        z-index: 1000;
+
+        &.tropGrand{
+            left: -20px;
+        }
+
+        &.drapeau{
+            left: -30px;
+        }
+
+        ul{
+            gap: 25px;
+            font-size: 20px;
+            padding: 10px;
+            width: fit-content;
+            display: block;
+            list-style: none;
+        }
+
+        &:hover{
+            transform: scaleY(100%);
+        }
     }
 
     
