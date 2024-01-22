@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 form{
   display:flex;
   flex-direction: column;
@@ -33,6 +34,16 @@ textarea {
 
   &#adresse{
     height: 25px;
+=======
+    form{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    align-content: space-evenly;
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+>>>>>>> e2f4bd990d85572aad9a0a2fda2b577ea5dac3db
   }
 }
 

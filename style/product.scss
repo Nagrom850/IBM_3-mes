@@ -1,6 +1,7 @@
 html, body{
     height: auto;
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -76,13 +77,10 @@ main{
                 flex-direction: column;
                 justify-content: center;
             }
-
+     
         }
 
     }
-<<<<<<< HEAD
-    
-=======
 
     .section {
         opacity: 0;
@@ -95,5 +93,4 @@ main{
         transform: translateY(0);
     }
 
->>>>>>> e2f4bd990d85572aad9a0a2fda2b577ea5dac3db
 }
