@@ -80,13 +80,14 @@ header div.deroulant:hover {
   transform: scaleY(100%);
 }
 header .n1 {
-  position: sticky;
+  position: absolute;
   right: 0px;
 }
 header .n2 {
-  position: sticky;
+  position: absolute;
   right: 50px;
   cursor: pointer;
+  width: 50px;
 }
 header .n2:hover div.deroulant {
   transform: scaleY(100%);
@@ -127,7 +128,7 @@ footer {
 nav {
   /*nav for large screen*/
   /*center the nav*/
-  margin: auto auto;
+  margin: auto 150px auto auto;
 }
 nav ul {
   list-style-type: none;
