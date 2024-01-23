@@ -97,23 +97,15 @@ main{
                 justify-content: center;
                 align-items: center;
                 flex-basis: 49%;
-        
+
                 div{
                     display: flex;
                     flex-direction: column;
-                    width: 100%;
-
-                    img{
-                        width: 100%;
-                        height: auto;
-                        border: 1px solid black;
-                    
-                    }
-
+                    gap: 10px;
                 }
         
                 img{
-                    width: 53%;
+                    width: 100%;
                     border: 1px solid black;
                 }
         
@@ -128,5 +120,16 @@ main{
             }  
         }
 
+    }
+}
+
+@media screen and (max-width: 1108px) {
+    main {
+        section {
+            flex-basis: 100%;
+            >*{
+                flex-basis: 90%;
+            }
+        }
     }
 }

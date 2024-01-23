@@ -82,7 +82,7 @@ main{
                 align-items: center;
                 flex-basis: 49%;
 
-                div{
+                .compose{
                     display: flex;
                     flex-direction: column;
                     width: 100%;
@@ -94,9 +94,13 @@ main{
                     }
 
                 }
+
+                .montage{
+                    width: 53%;
+                }
         
                 img{
-                    width: 53%;
+                    width: 100%;
                     border: 1px solid black;
                 }
         
@@ -114,3 +118,4 @@ main{
 
     }
 }
+

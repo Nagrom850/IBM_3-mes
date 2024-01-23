@@ -280,7 +280,7 @@ main hr {
 }
 main .main_div {
   width: 90%;
-  max-width: 1250px;
+  max-width: 1150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -315,17 +315,20 @@ main .main_div section .images {
   align-items: center;
   flex-basis: 49%;
 }
-main .main_div section .images div {
+main .main_div section .images .compose {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-main .main_div section .images div img {
+main .main_div section .images .compose img {
   width: 100%;
   border: 1px solid black;
 }
-main .main_div section .images img {
+main .main_div section .images .montage {
   width: 53%;
+}
+main .main_div section .images img {
+  width: 100%;
   border: 1px solid black;
 }
 main .main_div section .texte {

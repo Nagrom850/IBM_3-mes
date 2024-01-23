@@ -327,15 +327,10 @@ main .main_div section .images {
 main .main_div section .images div {
   display: flex;
   flex-direction: column;
-  width: 100%;
-}
-main .main_div section .images div img {
-  width: 100%;
-  height: auto;
-  border: 1px solid black;
+  gap: 10px;
 }
 main .main_div section .images img {
-  width: 53%;
+  width: 100%;
   border: 1px solid black;
 }
 main .main_div section .texte {
@@ -343,4 +338,13 @@ main .main_div section .texte {
   flex-direction: column;
   justify-content: center;
   flex-basis: 49%;
+}
+
+@media screen and (max-width: 1108px) {
+  main section {
+    flex-basis: 100%;
+  }
+  main section > * {
+    flex-basis: 90%;
+  }
 }/*# sourceMappingURL=productPage.css.map */
