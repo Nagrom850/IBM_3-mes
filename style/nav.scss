@@ -18,6 +18,7 @@ nav{
     }
 
     li{
+        //on creer une petite fleches a coté des element qui en contiennent d'autre dans un menu déroulant
         span{
             display: inline-block;
             font-weight: bold;
@@ -25,11 +26,12 @@ nav{
         }
         
         &:hover{
-            
+            //quand on survole l'element du nav on affiche le menu déroulant
             div.deroulant{
                 transform: scaleY(100%);
             }
 
+            //et fait trouner la petite fleche dans le span icon
             span{
                 transform: rotate(90deg);
             }

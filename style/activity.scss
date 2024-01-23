@@ -69,6 +69,7 @@ main{
             }
             
             >*{
+                //on defini leur "box" de tous ses elements fils direct (pour que les attribut affect l'element jusqu'a la bordure (ignorer le padding))
                 box-sizing: border-box;
             }
     
