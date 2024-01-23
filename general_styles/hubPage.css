@@ -93,21 +93,19 @@ section.HubBox p {
   transition: 0.3s;
   transform-origin: bottom;
 }
-section.HubBox p i {
-  /*makethelittlearrow*/position: absolute;
+section.HubBox p img {
+  /*make the little arrow*/
+  position: absolute;
   bottom: 10px;
   right: 10px;
   height: 20px;
   width: 20px;
+  border-radius: 15px;
   padding: 2px;
   transition: 0.3s;
 }
-section.HubBox p a {
-  text-decoration: none;
-  color: black;
-}
-section.HubBox p i:hover {
-  scale: 125%;
+section.HubBox p img:hover {
+  background-color: rgba(213, 213, 213, 0.55);
   transition: 0.3s;
   cursor: pointer;
 }
@@ -216,13 +214,14 @@ header div.deroulant:hover {
   transform: scaleY(100%);
 }
 header .n1 {
-  position: sticky;
+  position: absolute;
   right: 0px;
 }
 header .n2 {
-  position: sticky;
+  position: absolute;
   right: 50px;
   cursor: pointer;
+  width: 50px;
 }
 header .n2:hover div.deroulant {
   transform: scaleY(100%);
@@ -264,6 +263,7 @@ nav {
   /*nav for large screen*/
   /*center the nav*/
   margin: auto auto;
+  padding: 0 100px 0 35px;
 }
 nav ul {
   list-style-type: none;
@@ -304,6 +304,7 @@ nav li:hover span {
     transform-origin: left;
     background-color: rgb(224, 224, 224);
     z-index: 1000;
+    padding: 0;
   }
   nav.open {
     opacity: 1;

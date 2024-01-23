@@ -3,10 +3,16 @@ header {
   background-color: rgb(224, 224, 224);
   border: solid 1px black;
   height: auto;
+  width: 100%;
+  box-sizing: border-box;
   padding: 5px 20px;
   display: flex;
   align-items: center;
   position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /*obliger de definir le li dans le header pour le drapeau cela evite les repetitions*/
 }
 header a {
   text-decoration: none;
@@ -29,16 +35,16 @@ header .imb_button {
   display: flex;
   align-items: center;
 }
-header .n2 {
-  position: relative;
+header li {
+  text-align: center;
+  transition: 0.3s;
   cursor: pointer;
-}
-header .n2:hover div.deroulant {
-  transform: scaleY(100%);
+  position: relative;
+  height: auto;
 }
 header div.deroulant {
   transform: scaleY(0);
-  background: rgb(224, 224, 224);
+  background: rgba(237, 237, 237, 0.7);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border: 1px solid black;
@@ -48,7 +54,7 @@ header div.deroulant {
   transform-origin: top;
   transition: 0.2s;
   position: absolute;
-  top: 30px;
+  top: 101%;
   left: 0;
   z-index: 1000;
 }
@@ -58,19 +64,57 @@ header div.deroulant.tropGrand {
 header div.deroulant.drapeau {
   left: -30px;
 }
+header div.deroulant li {
+  margin: 10px 0 10px 0;
+}
 header div.deroulant ul {
-  gap: 25px;
   font-size: 20px;
-  padding: 10px;
+  padding: 0;
   width: -moz-fit-content;
   width: fit-content;
   display: block;
   list-style: none;
+  margin: 10px 5px 10px 5px;
 }
 header div.deroulant:hover {
+  transform: scaleY(100%);
+}
+header .n1 {
+  position: absolute;
+  right: 0px;
+}
+header .n2 {
+  position: absolute;
+  right: 50px;
+  cursor: pointer;
+  width: 50px;
+}
+header .n2:hover div.deroulant {
   transform: scaleY(100%);
 }
 
 .title {
   text-align: center;
+}
+
+.open-btn, .close-btn {
+  /*disable burger menu icon when the screen is wide*/
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  /*make the burger nav when the screen is small*/
+  header h1 {
+    /*make the title not attach to the burger icon*/
+    margin-left: 20px;
+  }
+  .open-btn, .close-btn {
+    /*make the burger button visible*/
+    display: block;
+    float: left;
+    margin: auto 0;
+  }
+  .close-btn {
+    margin: 5px 20px;
+  }
 }/*# sourceMappingURL=header.css.map */

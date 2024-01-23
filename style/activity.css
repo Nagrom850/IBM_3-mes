@@ -21,11 +21,6 @@ main {
   align-items: center;
   margin-bottom: 20px;
 }
-main hr {
-  width: 100%;
-  border-top: 5px solid rgb(224, 224, 224);
-  border-radius: 10px;
-}
 main .main_div {
   width: 90%;
   display: flex;
@@ -34,11 +29,9 @@ main .main_div {
   align-items: center;
   gap: 20px;
 }
-main .main_div li {
-  list-style-type: none;
-}
 main .main_div section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -51,11 +44,8 @@ main .main_div section.visible {
   opacity: 1;
   transform: translateY(0);
 }
-main .main_div section:nth-child(odd) {
-  flex-wrap: wrap-reverse;
-}
 main .main_div section:nth-child(even) {
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 main .main_div section > * {
   flex-basis: 49%;
@@ -84,4 +74,4 @@ main .main_div section .texte {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}/*# sourceMappingURL=product.css.map */
+}/*# sourceMappingURL=activity.css.map */
