@@ -1,0 +1,28 @@
+.underline {
+    &::after{
+        /*create smoth underline*/
+        content: '';
+        position: absolute;
+        bottom: 2px;left: 5%;
+        width: 90%;
+        height: 2px;
+        background-color: black;
+        opacity: 1;
+        transform: scaleX(0);
+        /*origine from the center of the li*/
+        transform-origin: center;
+        transition: 0.2s;
+    }
+
+    &.open{
+        &::after{
+            transform: scaleX(100%);
+        }
+    }
+    
+    &:hover{
+        &::after{
+            transform: scaleX(100%);
+        }
+    }
+}

@@ -1,0 +1,112 @@
+header{
+    /*make the header style*/
+<<<<<<< HEAD
+    background-color: rgb(224, 224, 224);
+    border: solid 1px black;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0; left: 0;
+    z-index: 1000;
+
+    a{
+        text-decoration: none;
+        color: black;
+=======
+    background-color: rgba(0, 81, 255, 0.2);
+    border: solid 1px black;
+    height: auto;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+
+    h1{
+        /*put the title on the left of it*/
+        margin: 0;
+>>>>>>> 38a9bcfbe4b2ba3e2471bca6ceecfd8dc52ff965
+    }
+
+    img, >a{
+        /*make the icon little and adjust to the header size*/
+        width: 50px;
+        height: 50px;
+        transition: 0.3s;
+
+        &:hover{
+            /*upScale it when over*/
+            transform: scale(105%);
+        }
+    }
+
+<<<<<<< HEAD
+    .imb_button{
+        text-decoration: none;
+        color: black;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .n2{
+        position: relative;
+        cursor: pointer;
+
+        &:hover{
+            div.deroulant{
+                transform: scaleY(100%);
+            }
+        }
+    }
+
+    div.deroulant{
+        transform: scaleY(0);
+        background: rgba(237, 237, 237,0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid black;
+        border-radius: 5px;
+        width: fit-content;
+        transform-origin: top;
+        transition: 0.2s;
+        position: absolute;
+        top: 101%;left: 0;
+        z-index: 1000;
+
+        &.tropGrand{
+            left: -20px;
+        }
+
+        &.drapeau{
+            left: -30px;
+        }
+
+        ul{
+            gap: 25px;
+            font-size: 20px;
+            padding: 10px;
+            width: fit-content;
+            display: block;
+            list-style: none;
+        }
+
+        &:hover{
+            transform: scaleY(100%);
+        }
+    }
+
+    
+}
+
+.title{
+    text-align: center;
+}
+
+=======
+    
+}
+
+>>>>>>> 38a9bcfbe4b2ba3e2471bca6ceecfd8dc52ff965
+

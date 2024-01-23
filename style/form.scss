@@ -1,0 +1,53 @@
+form{
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  margin-top: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  display: block;
+  border: none;
+  height: 30px;
+  border-bottom: solid 2px black;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+select{
+  height: 32px;
+}
+
+textarea {
+  height: 60px;
+  resize: vertical;
+  border: solid 2px black;
+
+  &#adresse{
+    height: 25px;
+  }
+}
+
+div{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+form input[type='submit'] {
+  width: 100%;
+  border: 1px solid gray;
+  background-color: rgb(240, 240, 240);
+  border-radius: 2px;
+  padding: 0;
+  height: 40px;
+}
