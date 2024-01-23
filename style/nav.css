@@ -1,0 +1,112 @@
+.open-btn, .close-btn {
+  /*disable burger menu icon when the screen is wide*/
+  display: none;
+}
+
+nav {
+  /*nav for large screen*/
+  /*center the nav*/
+  margin: auto auto;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  /*make the link list look like somethings*/
+  font-size: 20px;
+  /*adjust with the width of the screen*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: auto;
+  justify-content: center;
+}
+nav li {
+  /*make the li look like clickable*/
+  text-align: center;
+  padding: 5px;
+  border-radius: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+nav li a {
+  text-decoration: none;
+  color: black;
+}
+nav li span {
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.2s;
+}
+nav li:hover div.deroulant {
+  transform: scaleY(100%);
+}
+nav li:hover span {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 650px) {
+  /*make the burger nav when the screen is small*/
+  header h1 {
+    /*make the title not attach to the burger icon*/
+    margin-left: 20px;
+  }
+  header .right {
+    /*place search icon and flag icon to the right*/
+    position: absolute;
+  }
+  header .right.n1 {
+    right: 0px;
+  }
+  header .right.n2 {
+    right: 50px;
+  }
+  .open-btn, .close-btn {
+    /*make the burger button visible*/
+    display: block;
+    float: left;
+    margin: auto 0;
+  }
+  .close-btn {
+    margin: 5px 20px;
+  }
+  nav {
+    /*attach the nav on the total screen*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*transition from the side of the screen*/
+    transform: scaleX(0);
+    opacity: 0;
+    transition: 0.3s;
+    transform-origin: left;
+    background-color: rgb(224, 224, 224);
+    z-index: 1000;
+  }
+  nav.open {
+    opacity: 1;
+    transform: scaleX(100%);
+  }
+  nav ul {
+    /*make the link list adjust for the burger*/
+    gap: 25px;
+    font-size: 5vw;
+    padding: 60px 0;
+    width: auto;
+    display: block;
+  }
+  nav ul li div.deroulant {
+    position: relative;
+    height: 0;
+    transition: 0.2s;
+    width: 90%;
+    left: 5%;
+    top: 0;
+  }
+  nav ul li:hover div {
+    height: auto;
+    transition: 0.2s;
+  }
+}/*# sourceMappingURL=nav.css.map */
