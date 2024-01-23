@@ -1,9 +1,11 @@
 html, body{
     height: auto;
+    //on defini la auteur minimal de la page pour qu'elle couvre l'entiereté de la fenêtre
     min-height: 100vh;
 }
 
 body{
+    //on supprime la marge de base du body (qui on se demande pourquoi elle existe)
     margin: 0;
     font-family: Arial, serif;
     opacity: 0;
@@ -22,6 +24,7 @@ main{
     align-items: center;
     margin-bottom: 20px;
 
+    //separateur simple entre les sections
     hr{
         width: 100%;
         border-top: 5px solid rgb(224, 224, 224);
@@ -30,11 +33,15 @@ main{
     }
 
     .main_div {
+        //on defini la largeur de la page contenant les info a 90% et max a 1150px pour un meilleur rendu
         width: 90%;
+        max-width: 1150px;
         display: flex;
         flex-direction: column;
+        //on centrez tous les elements sur les 2axes
         justify-content: center;
         align-items: center;
+        //on ecarte les section de 20px (en plus du separateur)
         gap: 20px;
 
         section{
@@ -43,36 +50,41 @@ main{
             justify-content: center;
             gap: 20px;
 
+            //les section sont invisible par defaut (et apparaissent avec une transition grâce à du JS)
             &.section{
                 opacity: 0;
                 transform: translateY(20px);
                 transition: opacity 1s ease, transform 1s ease;
             }
 
+            //l'attribut visible qui leur est ajouter lorsque on arrive a leur niveau sur la page 
             &.visible {
                 opacity: 1;
                 transform: translateY(0);
             }
 
             &:nth-child(even) {
+                //permet de changer l'ordre entre les image et le texte lors du raitrécissement de la page
                 flex-wrap: wrap-reverse;
             }
             
             >*{
-                flex-basis: 49%;
                 box-sizing: border-box;
             }
     
             .images{
+                //on definie les propriété pour les image et le montage des 3 image de la 1er section
                 display: flex;
                 flex-direction: row;
+                //on centre les image pour les avoir en face du texte
                 justify-content: center;
-                align-items: top;
-        
-                div{
+                align-items: center;
+                flex-basis: 49%;
+
+                .compose{
                     display: flex;
                     flex-direction: column;
-                    width: 47%;
+                    width: 100%;
 
                     img{
                         width: 100%;
@@ -81,18 +93,24 @@ main{
                     }
 
                 }
+
+                .montage{
+                    width: 53%;
+                }
         
                 img{
-                    width: 53%;
+                    width: 100%;
                     border: 1px solid black;
                 }
         
             }
 
             .texte{
+                //on defini l'espace du texte dans la section de manière à ce qu'il soit à coté du texte
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                flex-basis: 49%;
             }
 
         }
