@@ -32,19 +32,39 @@ nav{
         transition: 0.3s;
         cursor: pointer;
         position: relative;
+<<<<<<< HEAD
         height: auto;
+=======
+
+>>>>>>> 38a9bcfbe4b2ba3e2471bca6ceecfd8dc52ff965
         a{
             text-decoration: none;
             color: black;
         }
 
+<<<<<<< HEAD
         span{
             display: inline-block;
             font-weight: bold;
+=======
+        &.underline::after {
+            /*create smoth underline*/
+            content: '';
+            position: absolute;
+            bottom: 2px;left: 5%;
+            width: 90%;
+            height: 2px;
+            background-color: black;
+            opacity: 1;
+            transform: scaleX(0);
+            /*origine from the center of the li*/
+            transform-origin: center;
+>>>>>>> 38a9bcfbe4b2ba3e2471bca6ceecfd8dc52ff965
             transition: 0.2s;
         }
         
         &:hover{
+<<<<<<< HEAD
             
             div.deroulant{
                 transform: scaleY(100%);
@@ -54,16 +74,57 @@ nav{
                 transform: rotate(90deg);
             }
 
+=======
+            &.underline::after{
+                transform: scaleX(100%);
+            }
+            
+            div{
+                transform: scaleY(100%);
+            }
+        }
+
+        div{
+            transform: scaleY(0);
+            background: transparent;
+            backdrop-filter: blur(10px);
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 80%;
+            transform-origin: top;
+            transition: 0.2s;
+            position: absolute;
+            top: bottom;left: 10%;
+            z-index: 1000;
+
+            &:hover{
+                transform: scaleY(100%);
+            }
+
+            ul{
+                gap: 25px;
+                font-size: 20px;
+                padding: 10px;
+                width: auto;
+                display: block;
+            }
+>>>>>>> 38a9bcfbe4b2ba3e2471bca6ceecfd8dc52ff965
         }
     }
 }
 
 
+<<<<<<< HEAD
 
 @media screen and (max-width:650px) {
     /*make the burger nav when the screen is small*/
     header{
 
+=======
+@media screen and (max-width:650px) {
+    /*make the burger nav when the screen is small*/
+    header{
+>>>>>>> 38a9bcfbe4b2ba3e2471bca6ceecfd8dc52ff965
         h1{
             /*make the title not attach to the burger icon*/
             margin-left: 20px;
@@ -105,7 +166,11 @@ nav{
         opacity: 0;
         transition: 0.3s;
         transform-origin: left;
+<<<<<<< HEAD
         background-color: rgb(224, 224, 224);
+=======
+        background-color: rgb(181, 181, 181);
+>>>>>>> 38a9bcfbe4b2ba3e2471bca6ceecfd8dc52ff965
         z-index: 1000;
 
         &.open{
@@ -122,6 +187,7 @@ nav{
             display: block;
             
             li{
+<<<<<<< HEAD
                 div.deroulant{
                     height: auto;
                     transition: 0.2s;
@@ -136,11 +202,20 @@ nav{
                     &.tropGrand{
                         left: 5%;
                     }
+=======
+                div{
+                    position: relative;
+                    height: 0;
+>>>>>>> 38a9bcfbe4b2ba3e2471bca6ceecfd8dc52ff965
                 }
 
                 &:hover{
                     div{
+<<<<<<< HEAD
                         transform: scaleY(100%);
+=======
+                        height: auto;
+>>>>>>> 38a9bcfbe4b2ba3e2471bca6ceecfd8dc52ff965
                         transition: 0.2s;
                     } 
                 }

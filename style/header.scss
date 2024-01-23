@@ -1,5 +1,6 @@
 header{
     /*make the header style*/
+<<<<<<< HEAD
     background-color: rgb(224, 224, 224);
     border: solid 1px black;
     height: auto;
@@ -15,6 +16,18 @@ header{
     a{
         text-decoration: none;
         color: black;
+=======
+    background-color: rgba(0, 81, 255, 0.2);
+    border: solid 1px black;
+    height: auto;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+
+    h1{
+        /*put the title on the left of it*/
+        margin: 0;
+>>>>>>> 38a9bcfbe4b2ba3e2471bca6ceecfd8dc52ff965
     }
 
     img, >a{
@@ -29,6 +42,7 @@ header{
         }
     }
 
+<<<<<<< HEAD
     .imb_button{
         text-decoration: none;
         color: black;
@@ -90,4 +104,9 @@ header{
     text-align: center;
 }
 
+=======
+    
+}
+
+>>>>>>> 38a9bcfbe4b2ba3e2471bca6ceecfd8dc52ff965
 
