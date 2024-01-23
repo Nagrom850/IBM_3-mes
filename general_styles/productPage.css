@@ -280,11 +280,17 @@ main .main_div {
   align-items: center;
   gap: 20px;
 }
+main .main_div hr {
+  width: 100%;
+  border-top: 5px solid rgb(224, 224, 224);
+  border-radius: 10px;
+}
 main .main_div section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  box-sizing: border-box;
 }
 main .main_div section:nth-child(even) {
   flex-wrap: wrap-reverse;
