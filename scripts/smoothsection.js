@@ -7,7 +7,7 @@ function checkScroll() {
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
         
-        if (sectionTop < windowHeight * 0.8) {
+        if (sectionTop < windowHeight * 0.9) {
             section.classList.add('visible');
         } else {
             section.classList.remove('visible'); 

@@ -1,12 +1,8 @@
-.open-btn, .close-btn {
-  /*disable burger menu icon when the screen is wide*/
-  display: none;
-}
-
 nav {
   /*nav for large screen*/
   /*center the nav*/
   margin: auto auto;
+  padding: 0 100px 0 35px;
 }
 nav ul {
   list-style-type: none;
@@ -16,22 +12,9 @@ nav ul {
   /*adjust with the width of the screen*/
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  margin: auto;
+  gap: 15px;
+  margin: 0;
   justify-content: center;
-}
-nav li {
-  /*make the li look like clickable*/
-  text-align: center;
-  padding: 5px;
-  border-radius: 15px;
-  transition: 0.3s;
-  cursor: pointer;
-  position: relative;
-}
-nav li a {
-  text-decoration: none;
-  color: black;
 }
 nav li span {
   display: inline-block;
@@ -46,30 +29,6 @@ nav li:hover span {
 }
 
 @media screen and (max-width: 650px) {
-  /*make the burger nav when the screen is small*/
-  header h1 {
-    /*make the title not attach to the burger icon*/
-    margin-left: 20px;
-  }
-  header .right {
-    /*place search icon and flag icon to the right*/
-    position: absolute;
-  }
-  header .right.n1 {
-    right: 0px;
-  }
-  header .right.n2 {
-    right: 50px;
-  }
-  .open-btn, .close-btn {
-    /*make the burger button visible*/
-    display: block;
-    float: left;
-    margin: auto 0;
-  }
-  .close-btn {
-    margin: 5px 20px;
-  }
   nav {
     /*attach the nav on the total screen*/
     position: fixed;
@@ -84,6 +43,7 @@ nav li:hover span {
     transform-origin: left;
     background-color: rgb(224, 224, 224);
     z-index: 1000;
+    padding: 0;
   }
   nav.open {
     opacity: 1;
@@ -97,16 +57,28 @@ nav li:hover span {
     width: auto;
     display: block;
   }
+  nav ul li {
+    margin: 15px 0 15px 0;
+  }
   nav ul li div.deroulant {
-    position: relative;
-    height: 0;
+    height: auto;
     transition: 0.2s;
     width: 90%;
     left: 5%;
-    top: 0;
+    top: 101%;
+    transform: scaleY(0);
+    transform-origin: top;
+    border-radius: 0;
+    border: none;
+    border-top: 3px black solid;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li div.deroulant.tropGrand {
+    left: 5%;
   }
   nav ul li:hover div {
-    height: auto;
+    transform: scaleY(100%);
     transition: 0.2s;
   }
 }/*# sourceMappingURL=nav.css.map */
