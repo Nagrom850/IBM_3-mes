@@ -1,6 +1,7 @@
 html, body{
     height: auto;
     min-height: 100vh;
+    //toujours pareil pour la page
     scroll-behavior: smooth;
 }
 
@@ -13,16 +14,18 @@ body{
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
-
 }
 
 main{
+    //rend la page en flex pour simplifier et rendre plus souple les manipulations des elements
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    //premt également de centrer plus facilement les éléments
     align-items: center;
     margin-bottom: 20px;
 
+    //definie le separateur comme poour la page activity (on aurait pu faire un fichier séparé mais seulement pour ça c'est faible
     hr{
         width: 100%;
         border-top: 5px solid rgb(224, 224, 224);
@@ -30,23 +33,28 @@ main{
         
     }
 
+    //rand les petit sommaire deroulant comme des lien cliquable (rend le curseur en pointeur pour faire comprendre que l'ont peu intéragir)
     details{
         cursor: pointer;
     }
 
     .main_div {
+        //la division comme pour le activity ne fait pas 100% de la page pour un meilleur rendu visuel
         width: 90%;
         max-width: 1250px;
+        //flex permet encore une fois de simplifier les centrage et rend le placement des elements plus simple
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        //20px entre chaques section de cette page en plus du separateur
         gap: 20px;
 
         ul{
-            list-style-type: disc;
+            list-style-type: disc; //sinon on met un style simple mais qui rend la lectur et la comprehension plus facile
 
             &.detail{
+                //si la list ul est un class detail (contient les sommaire depliant du début) alors pas de style car déja un style par le dépliant
                 list-style: none;
             }
         }
@@ -56,17 +64,20 @@ main{
             justify-content: center;
             gap: 20px;
 
+            //comme pour activity les section sont caché au début (sauf celle en haut de la page qui n'ont pas cette classe pour eviter des bug visuels)
             &.section{
                 opacity: 0;
                 transform: translateY(20px);
                 transition: opacity 1s ease, transform 1s ease;
             }
 
+            //et les rend visible en ajoutant cette class avec du js lorqu'il arrive au niveau de la fenêtre
             &.visible {
                 opacity: 1;
                 transform: translateY(0);
             }
 
+            //permet de changer l'ordre entre les image et le texte lors du raitrécissement de la page
             &:nth-child(odd) {
                 flex-wrap: wrap-reverse;
             }
@@ -79,6 +90,7 @@ main{
                 box-sizing: border-box;
             }
     
+            //paramettre les images en fonction de leur utilité et permet de faire un affichage 50 / 50 quand la fenêtre est assez grande
             .images{
                 display: flex;
                 flex-direction: row;
@@ -99,6 +111,7 @@ main{
         
             }
 
+            //idem pour le text lui mettre 50% de basis permet un affichage 50 / 50 quand la fenêtre est assez grande
             .texte{
                 display: flex;
                 flex-direction: column;

@@ -29,6 +29,7 @@ select {
   box-sizing: border-box;
 }
 
+//propriété particulière pour certain éléments
 select{
   height: 32px;
 }
@@ -43,6 +44,7 @@ textarea {
   }
 }
 
+//pour afficher 2 element cote à cote
 div{
   width: 100%;
   display: flex;
@@ -50,6 +52,7 @@ div{
   gap: 15px;
 }
 
+//modifier le boutton pour envoyer
 form input[type='submit'] {
   width: 100%;
   border: 1px solid gray;
