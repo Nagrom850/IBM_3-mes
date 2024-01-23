@@ -264,6 +264,25 @@ body {
   background-color: white;
 }
 
+main details {
+  cursor: pointer;
+}
+main .main_div ul {
+  list-style-type: disc;
+}
+main .main_div ul.detail {
+  list-style: none;
+}
+main .main_div section:nth-child(odd) {
+  flex-wrap: wrap-reverse;
+}
+main .main_div section:nth-child(even) {
+  flex-wrap: wrap;
+}
+main .main_div section > * {
+  box-sizing: border-box;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -276,23 +295,14 @@ main hr {
   border-top: 5px solid rgb(224, 224, 224);
   border-radius: 10px;
 }
-main details {
-  cursor: pointer;
-}
 main .main_div {
   width: 90%;
-  max-width: 1250px;
+  max-width: 1150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
-main .main_div ul {
-  list-style-type: disc;
-}
-main .main_div ul.detail {
-  list-style: none;
 }
 main .main_div section {
   display: flex;
@@ -308,12 +318,6 @@ main .main_div section.visible {
   opacity: 1;
   transform: translateY(0);
 }
-main .main_div section:nth-child(odd) {
-  flex-wrap: wrap-reverse;
-}
-main .main_div section:nth-child(even) {
-  flex-wrap: wrap;
-}
 main .main_div section > * {
   box-sizing: border-box;
 }
@@ -324,11 +328,6 @@ main .main_div section .images {
   align-items: center;
   flex-basis: 49%;
 }
-main .main_div section .images div {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 main .main_div section .images img {
   width: 100%;
   border: 1px solid black;
@@ -338,13 +337,4 @@ main .main_div section .texte {
   flex-direction: column;
   justify-content: center;
   flex-basis: 49%;
-}
-
-@media screen and (max-width: 1108px) {
-  main section {
-    flex-basis: 100%;
-  }
-  main section > * {
-    flex-basis: 90%;
-  }
 }/*# sourceMappingURL=productPage.css.map */
