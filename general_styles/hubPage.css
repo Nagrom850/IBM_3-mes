@@ -112,8 +112,7 @@ section.HubBox:hover p {
   }
 }
 header {
-  background-color: rgb(224, 224, 224);
-  border: solid 1px black;
+  background-color: rgb(245, 244, 244);
   height: auto;
   width: 100%;
   box-sizing: border-box;

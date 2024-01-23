@@ -1,6 +1,5 @@
 header {
-  background-color: rgb(224, 224, 224);
-  border: solid 1px black;
+  background-color: rgb(245, 244, 244);
   height: auto;
   width: 100%;
   box-sizing: border-box;
@@ -286,7 +285,6 @@ main .main_div {
 }
 main .main_div section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -299,9 +297,6 @@ main .main_div section.visible {
   opacity: 1;
   transform: translateY(0);
 }
-main .main_div section:nth-child(even) {
-  flex-wrap: wrap-reverse;
-}
 main .main_div section > * {
   box-sizing: border-box;
 }
@@ -311,18 +306,6 @@ main .main_div section .images {
   justify-content: center;
   align-items: center;
   flex-basis: 49%;
-}
-main .main_div section .images .compose {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-main .main_div section .images .compose img {
-  width: 100%;
-  border: 1px solid black;
-}
-main .main_div section .images .montage {
-  width: 53%;
 }
 main .main_div section .images img {
   width: 100%;
