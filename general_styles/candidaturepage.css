@@ -131,6 +131,7 @@ nav {
   /*nav for large screen*/
   /*center the nav*/
   margin: auto auto;
+  flex-grow: 1;
 }
 nav ul {
   list-style-type: none;
