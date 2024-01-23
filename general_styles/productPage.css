@@ -1,5 +1,4 @@
 header {
-  /*make the header style*/
   background-color: rgb(224, 224, 224);
   border: solid 1px black;
   height: auto;
@@ -12,7 +11,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-  /*obliger de definir le li dans le header pour le drapeau cela evite les repetitions*/
+  /*obliger de definir le li dans le header pour le drapeau cela evite les repetitions entre nav et header*/
 }
 header a {
   text-decoration: none;
@@ -229,7 +228,6 @@ nav li:hover span {
 }
 
 .underline::after {
-  /*create smoth underline*/
   content: "";
   position: absolute;
   top: 101%;
@@ -239,7 +237,6 @@ nav li:hover span {
   background-color: black;
   opacity: 1;
   transform: scaleX(0);
-  /*origine from the center of the li*/
   transform-origin: center;
   transition: 0.2s;
 }
@@ -253,6 +250,7 @@ nav li:hover span {
 html, body {
   height: auto;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 body {
