@@ -3,12 +3,15 @@ header {
   background-color: rgb(224, 224, 224);
   border: solid 1px black;
   height: auto;
+  width: 100%;
+  box-sizing: border-box;
   padding: 5px 20px;
   display: flex;
   align-items: center;
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 header a {
   text-decoration: none;
@@ -40,7 +43,7 @@ header .n2:hover div.deroulant {
 }
 header div.deroulant {
   transform: scaleY(0);
-  background: rgb(224, 224, 224);
+  background: rgba(237, 237, 237, 0.7);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border: 1px solid black;
@@ -50,7 +53,7 @@ header div.deroulant {
   transform-origin: top;
   transition: 0.2s;
   position: absolute;
-  top: 30px;
+  top: 101%;
   left: 0;
   z-index: 1000;
 }
@@ -114,6 +117,7 @@ nav li {
   transition: 0.3s;
   cursor: pointer;
   position: relative;
+  height: auto;
 }
 nav li a {
   text-decoration: none;
@@ -183,20 +187,23 @@ nav li:hover span {
     width: auto;
     display: block;
   }
-  nav ul li div {
-    position: relative;
-    height: 0;
+  nav ul li div.deroulant {
+    height: auto;
     transition: 0.2s;
     width: 90%;
     left: 5%;
-    top: 0;
+    top: 101%;
+    transform: scaleY(0);
+    transform-origin: top;
+    border-radius: 0;
+    border: none;
+    border-top: 3px black solid;
   }
-  nav ul li div.tropGrand {
-    width: 90%;
+  nav ul li div.deroulant.tropGrand {
     left: 5%;
   }
   nav ul li:hover div {
-    height: auto;
+    transform: scaleY(100%);
     transition: 0.2s;
   }
 }

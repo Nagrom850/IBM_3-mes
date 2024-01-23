@@ -3,9 +3,19 @@ header {
   background-color: rgb(224, 224, 224);
   border: solid 1px black;
   height: auto;
+  width: 100%;
+  box-sizing: border-box;
   padding: 5px 20px;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+header a {
+  text-decoration: none;
+  color: black;
 }
 header img, header > a {
   /*make the icon little and adjust to the header size*/
@@ -23,6 +33,47 @@ header .imb_button {
   margin: 0;
   display: flex;
   align-items: center;
+}
+header .n2 {
+  position: relative;
+  cursor: pointer;
+}
+header .n2:hover div.deroulant {
+  transform: scaleY(100%);
+}
+header div.deroulant {
+  transform: scaleY(0);
+  background: rgba(237, 237, 237, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid black;
+  border-radius: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform-origin: top;
+  transition: 0.2s;
+  position: absolute;
+  top: 101%;
+  left: 0;
+  z-index: 1000;
+}
+header div.deroulant.tropGrand {
+  left: -20px;
+}
+header div.deroulant.drapeau {
+  left: -30px;
+}
+header div.deroulant ul {
+  gap: 25px;
+  font-size: 20px;
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  list-style: none;
+}
+header div.deroulant:hover {
+  transform: scaleY(100%);
 }
 
 .title {
@@ -66,6 +117,7 @@ nav li {
   transition: 0.3s;
   cursor: pointer;
   position: relative;
+  height: auto;
 }
 nav li a {
   text-decoration: none;
@@ -76,38 +128,11 @@ nav li span {
   font-weight: bold;
   transition: 0.2s;
 }
-nav li:hover div {
+nav li:hover div.deroulant {
   transform: scaleY(100%);
 }
 nav li:hover span {
   transform: rotate(90deg);
-}
-nav li div {
-  transform: scaleY(0);
-  background: rgb(224, 224, 224);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border: 1px solid black;
-  border-radius: 5px;
-  width: -moz-fit-content;
-  width: fit-content;
-  transform-origin: top;
-  transition: 0.2s;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  z-index: 1000;
-}
-nav li div.tropGrand {
-  left: -20px;
-}
-nav li div ul {
-  gap: 25px;
-  font-size: 20px;
-  padding: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: block;
 }
 
 @media screen and (max-width: 650px) {
@@ -162,20 +187,23 @@ nav li div ul {
     width: auto;
     display: block;
   }
-  nav ul li div {
-    position: relative;
-    height: 0;
+  nav ul li div.deroulant {
+    height: auto;
     transition: 0.2s;
     width: 90%;
     left: 5%;
-    top: 0;
+    top: 101%;
+    transform: scaleY(0);
+    transform-origin: top;
+    border-radius: 0;
+    border: none;
+    border-top: 3px black solid;
   }
-  nav ul li div.tropGrand {
-    width: 90%;
+  nav ul li div.deroulant.tropGrand {
     left: 5%;
   }
   nav ul li:hover div {
-    height: auto;
+    transform: scaleY(100%);
     transition: 0.2s;
   }
 }
@@ -212,6 +240,9 @@ nav li div ul {
   /*origine from the center of the li*/
   transform-origin: center;
   transition: 0.2s;
+}
+.underline.open::after {
+  transform: scaleX(100%);
 }
 .underline:hover::after {
   transform: scaleX(100%);
@@ -254,6 +285,15 @@ main .main_div section {
   justify-content: center;
   gap: 20px;
 }
+main .main_div section.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+main .main_div section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 main .main_div section:nth-child(even) {
   flex-wrap: wrap-reverse;
 }
@@ -284,13 +324,4 @@ main .main_div section .texte {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-main .section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-main .visible {
-  opacity: 1;
-  transform: translateY(0);
 }/*# sourceMappingURL=activityPage.css.map */

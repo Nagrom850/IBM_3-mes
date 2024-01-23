@@ -177,7 +177,7 @@ header .n2:hover div.deroulant {
 }
 header div.deroulant {
   transform: scaleY(0);
-  background: rgb(224, 224, 224);
+  background: rgba(237, 237, 237, 0.7);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border: 1px solid black;

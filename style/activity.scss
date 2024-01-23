@@ -36,6 +36,17 @@ main{
             justify-content: center;
             gap: 20px;
 
+            &.section{
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 1s ease, transform 1s ease;
+            }
+
+            &.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
             &:nth-child(even) {
                 flex-wrap: wrap-reverse;
             }
@@ -80,20 +91,4 @@ main{
         }
 
     }
-<<<<<<< HEAD
-    
-=======
-
-    .section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1s ease, transform 1s ease;
-    }
-    
-    .visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
->>>>>>> e2f4bd990d85572aad9a0a2fda2b577ea5dac3db
 }
