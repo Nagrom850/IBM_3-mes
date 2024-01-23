@@ -106,3 +106,14 @@ main{
 
     }
 }
+
+@media screen and (max-width: 1108px) {
+    main {
+        section {
+            flex-basis: 100%;
+            >*{
+                flex-basis: 90%;
+            }
+        }
+    }
+}

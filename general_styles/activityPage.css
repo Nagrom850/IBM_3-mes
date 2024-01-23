@@ -331,4 +331,13 @@ main .main_div section .texte {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width: 1108px) {
+  main section {
+    flex-basis: 100%;
+  }
+  main section > * {
+    flex-basis: 90%;
+  }
 }/*# sourceMappingURL=activityPage.css.map */
