@@ -67,8 +67,12 @@ header{
         //origne de la transformation en haut pour faire comme si le menu sortait du header
         transform-origin: top;
         transition: 0.2s;
+<<<<<<< HEAD
         //positionnement en dessous de l'element du header en question
         position: absolute;
+=======
+        position: relative;
+>>>>>>> c954537de261a59ec15f4c35d46c67000e47683a
         top: 101%;left: 0;
         z-index: 1000;
 
