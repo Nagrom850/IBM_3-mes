@@ -12,6 +12,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
+  position: relative;
   /*obliger de definir le li dans le header pour le drapeau cela evite les repetitions*/
 }
 header a {
@@ -86,9 +87,22 @@ header div.deroulant ul {
 header div.deroulant:hover {
   transform: scaleY(100%);
 }
+header .n1 {
+  right: 0px;
+  position: absolute;
+}
+header .n2 {
+  right: 50px;
+  position: absolute;
+}
 
 .title {
   text-align: center;
+}
+
+.open-btn, .close-btn {
+  /*disable burger menu icon when the screen is wide*/
+  display: none;
 }
 
 @media screen and (max-width: 650px) {
@@ -96,14 +110,6 @@ header div.deroulant:hover {
   header h1 {
     /*make the title not attach to the burger icon*/
     margin-left: 20px;
-  }
-  header .n1 {
-    right: 0px;
-    position: absolute;
-  }
-  header .n2 {
-    right: 50px;
-    position: absolute;
   }
   .open-btn, .close-btn {
     /*make the burger button visible*/
@@ -122,16 +128,10 @@ footer {
   padding: 5px 20px;
 }
 
-.open-btn, .close-btn {
-  /*disable burger menu icon when the screen is wide*/
-  display: none;
-}
-
 nav {
   /*nav for large screen*/
   /*center the nav*/
   margin: auto auto;
-  flex-grow: 1;
 }
 nav ul {
   list-style-type: none;

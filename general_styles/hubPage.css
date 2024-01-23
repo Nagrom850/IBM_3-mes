@@ -132,6 +132,10 @@ section.HubBox:hover p {
     width: 47%;
   }
 }
+html {
+  position: relative;
+}
+
 header {
   /*make the header style*/
   background-color: rgb(224, 224, 224);
@@ -220,21 +224,45 @@ header div.deroulant ul {
 header div.deroulant:hover {
   transform: scaleY(100%);
 }
+header .n1 {
+  right: 0px;
+  position: absolute;
+}
+header .n2 {
+  right: 50px;
+  position: absolute;
+}
 
 .title {
   text-align: center;
 }
 
+.open-btn, .close-btn {
+  /*disable burger menu icon when the screen is wide*/
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  /*make the burger nav when the screen is small*/
+  header h1 {
+    /*make the title not attach to the burger icon*/
+    margin-left: 20px;
+  }
+  .open-btn, .close-btn {
+    /*make the burger button visible*/
+    display: block;
+    float: left;
+    margin: auto 0;
+  }
+  .close-btn {
+    margin: 5px 20px;
+  }
+}
 footer {
   background-color: rgba(238, 238, 238, 0.55);
   border: solid 1px black;
   height: auto;
   padding: 5px 20px;
-}
-
-.open-btn, .close-btn {
-  /*disable burger menu icon when the screen is wide*/
-  display: none;
 }
 
 nav {
@@ -267,30 +295,6 @@ nav li:hover span {
 }
 
 @media screen and (max-width: 650px) {
-  /*make the burger nav when the screen is small*/
-  header h1 {
-    /*make the title not attach to the burger icon*/
-    margin-left: 20px;
-  }
-  header .right {
-    /*place search icon and flag icon to the right*/
-    position: absolute;
-  }
-  header .right.n1 {
-    right: 0px;
-  }
-  header .right.n2 {
-    right: 50px;
-  }
-  .open-btn, .close-btn {
-    /*make the burger button visible*/
-    display: block;
-    float: left;
-    margin: auto 0;
-  }
-  .close-btn {
-    margin: 5px 20px;
-  }
   nav {
     /*attach the nav on the total screen*/
     position: fixed;

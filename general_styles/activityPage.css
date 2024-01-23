@@ -1,3 +1,7 @@
+html {
+  position: relative;
+}
+
 header {
   /*make the header style*/
   background-color: rgb(224, 224, 224);
@@ -86,9 +90,22 @@ header div.deroulant ul {
 header div.deroulant:hover {
   transform: scaleY(100%);
 }
+header .n1 {
+  right: 0px;
+  position: absolute;
+}
+header .n2 {
+  right: 50px;
+  position: absolute;
+}
 
 .title {
   text-align: center;
+}
+
+.open-btn, .close-btn {
+  /*disable burger menu icon when the screen is wide*/
+  display: none;
 }
 
 @media screen and (max-width: 650px) {
@@ -96,14 +113,6 @@ header div.deroulant:hover {
   header h1 {
     /*make the title not attach to the burger icon*/
     margin-left: 20px;
-  }
-  header .n1 {
-    right: 0px;
-    position: absolute;
-  }
-  header .n2 {
-    right: 50px;
-    position: absolute;
   }
   .open-btn, .close-btn {
     /*make the burger button visible*/
@@ -120,11 +129,6 @@ footer {
   border: solid 1px black;
   height: auto;
   padding: 5px 20px;
-}
-
-.open-btn, .close-btn {
-  /*disable burger menu icon when the screen is wide*/
-  display: none;
 }
 
 nav {
