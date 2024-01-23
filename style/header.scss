@@ -88,14 +88,15 @@ header{
     }
 
     .n1{
-        position: sticky;
+        position: absolute;
         right: 0px;
     }
     
     .n2{
-        position: sticky;
+        position: absolute;
         right: 50px;
         cursor: pointer;
+        width: 50px;
 
         &:hover{
             div.deroulant{
@@ -122,7 +123,6 @@ header{
             /*make the title not attach to the burger icon*/
             margin-left: 20px;
         }
-        
     }
 
     .open-btn, .close-btn{
