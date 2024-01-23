@@ -1,11 +1,16 @@
 form{
+  //formulaire en flex pour placer les element cote à cote ou autre (plus de souplesse)
   display:flex;
+  //les un en dessous des autres
   flex-direction: column;
+  //on les ecarte de 20px
   gap: 20px;
+  //occupe 80% de la largeur du parent (ici body donc de la page)
   width: 80%;
   max-width: 500px;
   margin: 20px auto;
   margin-top: 0;
+  //on centre tout
   align-items: center;
   justify-content: center;
 }
@@ -13,12 +18,14 @@ form{
 input,
 textarea,
 select {
+  //chaque input doit avoir le même style principal
   width: 100%;
   display: block;
   border: none;
   height: 30px;
   border-bottom: solid 2px black;
   padding: 0;
+  //pour que les bord des element soit alligné (difference entre ceux entièrement entouré et ceux avec seulement le bas)
   box-sizing: border-box;
 }
 
