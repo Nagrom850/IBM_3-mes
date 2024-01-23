@@ -5,6 +5,8 @@ header {
   height: auto;
   width: 100%;
   box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
   padding: 5px 20px;
   display: flex;
   align-items: center;
@@ -12,7 +14,6 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-  /*obliger de definir le li dans le header pour le drapeau cela evite les repetitions*/
 }
 header a {
   text-decoration: none;
@@ -45,6 +46,7 @@ header li {
 header div.deroulant {
   transform: scaleY(0);
   background: rgba(237, 237, 237, 0.7);
+  background: rgba(237, 237, 237, 0.7);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border: 1px solid black;
@@ -53,7 +55,7 @@ header div.deroulant {
   width: fit-content;
   transform-origin: top;
   transition: 0.2s;
-  position: absolute;
+  position: relative;
   top: 101%;
   left: 0;
   z-index: 1000;
