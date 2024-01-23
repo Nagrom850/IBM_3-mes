@@ -273,6 +273,11 @@ main {
   align-items: center;
   margin-bottom: 20px;
 }
+main hr {
+  width: 100%;
+  border-top: 5px solid rgb(224, 224, 224);
+  border-radius: 10px;
+}
 main .main_div {
   width: 90%;
   display: flex;
