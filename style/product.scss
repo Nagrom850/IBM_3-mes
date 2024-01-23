@@ -29,16 +29,25 @@ main{
         
     }
 
+    details{
+        cursor: pointer;
+    }
+
     .main_div {
         width: 90%;
+        max-width: 1250px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 20px;
 
-        li{
-            list-style-type: none;
+        ul{
+            list-style-type: disc;
+
+            &.detail{
+                list-style: none;
+            }
         }
 
         section{
@@ -66,7 +75,6 @@ main{
             }
             
             >*{
-                flex-basis: 49%;
                 box-sizing: border-box;
             }
     
@@ -74,15 +82,17 @@ main{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                align-items: top;
+                align-items: center;
+                flex-basis: 49%;
         
                 div{
                     display: flex;
                     flex-direction: column;
-                    width: 47%;
+                    width: 100%;
 
                     img{
                         width: 100%;
+                        height: auto;
                         border: 1px solid black;
                     
                     }
@@ -100,12 +110,8 @@ main{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-<<<<<<< HEAD
+                flex-basis: 49%;
             }  
-=======
-            }
-
->>>>>>> 763174fed17c9ba162cb50c9387ff324a18518c3
         }
 
     }

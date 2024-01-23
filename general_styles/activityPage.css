@@ -280,6 +280,7 @@ main hr {
 }
 main .main_div {
   width: 90%;
+  max-width: 1250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -305,19 +306,19 @@ main .main_div section:nth-child(even) {
   flex-wrap: wrap-reverse;
 }
 main .main_div section > * {
-  flex-basis: 49%;
   box-sizing: border-box;
 }
 main .main_div section .images {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: top;
+  align-items: center;
+  flex-basis: 49%;
 }
 main .main_div section .images div {
   display: flex;
   flex-direction: column;
-  width: 47%;
+  width: 100%;
 }
 main .main_div section .images div img {
   width: 100%;
@@ -331,4 +332,5 @@ main .main_div section .texte {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-basis: 49%;
 }/*# sourceMappingURL=activityPage.css.map */
