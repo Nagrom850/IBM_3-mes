@@ -93,19 +93,21 @@ section.HubBox p {
   transition: 0.3s;
   transform-origin: bottom;
 }
-section.HubBox p img {
-  /*make the little arrow*/
-  position: absolute;
+section.HubBox p i {
+  /*makethelittlearrow*/position: absolute;
   bottom: 10px;
   right: 10px;
   height: 20px;
   width: 20px;
-  border-radius: 15px;
   padding: 2px;
   transition: 0.3s;
 }
-section.HubBox p img:hover {
-  background-color: rgba(213, 213, 213, 0.55);
+section.HubBox p a {
+  text-decoration: none;
+  color: black;
+}
+section.HubBox p i:hover {
+  scale: 125%;
   transition: 0.3s;
   cursor: pointer;
 }
