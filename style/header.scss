@@ -1,7 +1,7 @@
 
 
 header{
-    /*make the header style*/
+    //style graphique du header 
     background-color: rgb(224, 224, 224);
     border: solid 1px black;
     height: auto;
@@ -10,11 +10,14 @@ header{
     padding: 5px 20px;
     display: flex;
     align-items: center;
+    //toujours visible en haut de la page (plutôt de la fenêtre)
     position: sticky;
     top: 0; left: 0;
+    //au dessous de tout (gros indice pour être sur même si on créer d'autre élément possédant un attribut z-index)
     z-index: 1000;
 
     a{
+        //eneleve le style de base des lien (qui est plutôt laid)
         text-decoration: none;
         color: black;
     }
@@ -39,46 +42,61 @@ header{
         align-items: center;
     }
 
-    /*obliger de definir le li dans le header pour le drapeau cela evite les repetitions*/
+    /*obliger de definir le li dans le header pour le drapeau cela evite les repetitions entre nav et header*/
     li{
         text-align: center;
+        //defini un temps de transition
         transition: 0.3s;
+        //defini le curseur de la souris comme pointeur car pas toujours des liens qui sont utilisé
         cursor: pointer;
         position: relative;
+        //hauteur adapter au contenu
         height: auto;
     }
 
     div.deroulant{
+        //on le rend petit de façon a ce qu'il soit invisble (cela permet une transition contrairement au display:none)
         transform: scaleY(0);
+        //fond pareil que le header mais un peu transparent
         background: rgba(237, 237, 237,0.7);
+        //effet flou / vitre
         backdrop-filter: blur(10px);
         border: 1px solid black;
         border-radius: 5px;
         width: fit-content;
+        //origne de la transformation en haut pour faire comme si le menu sortait du header
         transform-origin: top;
         transition: 0.2s;
-        position: relative;
+        //positionnement en dessous de l'element du header en question
+        position: absolute;
         top: 101%;left: 0;
         z-index: 1000;
 
         &.tropGrand{
+            //besoin de decaler pour "A propos" car element trop cour comparé au menu déroulant
             left: -20px;
         }
 
         &.drapeau{
+            //idem pour de drapeau
             left: -30px;
         }
         
         li{
+            //on fait en sorte que le menu deroulant ne soit pas trop tassé
             margin: 10px 0 10px 0;
         }
 
         ul{
+            //defini des propriété pour toute la liste du déroulant
             font-size: 20px;
             padding: 0;
+            //fait la taille qu'il faut
             width: fit-content;
             display: block;
+            //pas de puce
             list-style: none;
+            //fait en sort que les bord ne soit pas trop proche du texte
             margin: 10px 5px 10px 5px;
         }
 
@@ -87,6 +105,8 @@ header{
         }
     }
 
+
+    //place les image du drapeau et du home tt a droit du header
     .n1{
         position: absolute;
         right: 0px;
@@ -107,6 +127,7 @@ header{
     
 }
 
+//aligne le titre du site (IMB)
 .title{
     text-align: center;
 }
@@ -116,6 +137,7 @@ header{
     display: none;
 }
 
+//si l'ecran est reduit en taille il faut afficher un menu burger
 @media screen and (max-width:650px) {
     /*make the burger nav when the screen is small*/
     header{
@@ -125,6 +147,7 @@ header{
         }
     }
 
+    //affiche le bouton burger ouvrir et fermer (ouvrir etant en dehors de l'écran : voir fichier nav.scss)
     .open-btn, .close-btn{
         /*make the burger button visible*/
         display: block;

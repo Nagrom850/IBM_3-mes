@@ -1,10 +1,11 @@
 html, body{
     height: auto;
-    //page au minimum la taille de la fenêtre
+    //on defini la auteur minimal de la page pour qu'elle couvre l'entiereté de la fenêtre
     min-height: 100vh;
 }
 
 body{
+    //on supprime la marge de base du body (qui on se demande pourquoi elle existe)
     margin: 0;
     font-family: Arial, serif;
     opacity: 0;
@@ -13,4 +14,6 @@ body{
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
+
 }
+

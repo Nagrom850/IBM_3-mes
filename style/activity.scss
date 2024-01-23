@@ -1,9 +1,11 @@
 html, body{
     height: auto;
+    //on defini la auteur minimal de la page pour qu'elle couvre l'entiereté de la fenêtre
     min-height: 100vh;
 }
 
 body{
+    //on supprime la marge de base du body (qui on se demande pourquoi elle existe)
     margin: 0;
     font-family: Arial, serif;
     opacity: 0;
@@ -16,63 +18,23 @@ body{
 }
 
 main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-
-    hr{
-        width: 100%;
-        border-top: 5px solid rgb(224, 224, 224);
-        border-radius: 10px;
-        
-    }
 
     .main_div {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-
+ 
         section{
-            display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-
-            &.section{
-                opacity: 0;
-                transform: translateY(20px);
-                transition: opacity 1s ease, transform 1s ease;
-            }
-
-            &.visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
 
             &:nth-child(even) {
+                //permet de changer l'ordre entre les image et le texte lors du raitrécissement de la page
                 flex-wrap: wrap-reverse;
             }
             
-            >*{
-                flex-basis: 49%;
-                box-sizing: border-box;
-            }
-    
             .images{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: top;
-        
-                div{
+
+                .compose{
                     display: flex;
                     flex-direction: column;
-                    width: 47%;
+                    width: 100%;
 
                     img{
                         width: 100%;
@@ -82,17 +44,6 @@ main{
 
                 }
         
-                img{
-                    width: 53%;
-                    border: 1px solid black;
-                }
-        
-            }
-
-            .texte{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
             }
 
         }
