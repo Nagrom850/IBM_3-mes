@@ -170,6 +170,7 @@ nav li:hover span {
     transform-origin: left;
     background-color: rgb(224, 224, 224);
     z-index: 1000;
+    padding: 0;
   }
   nav.open {
     opacity: 1;

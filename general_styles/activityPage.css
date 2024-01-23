@@ -129,6 +129,7 @@ nav {
   /*nav for large screen*/
   /*center the nav*/
   margin: auto auto;
+  padding: 0 100px 0 35px;
 }
 nav ul {
   list-style-type: none;
@@ -169,6 +170,7 @@ nav li:hover span {
     transform-origin: left;
     background-color: rgb(224, 224, 224);
     z-index: 1000;
+    padding: 0;
   }
   nav.open {
     opacity: 1;
@@ -270,11 +272,6 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-}
-main hr {
-  width: 100%;
-  border-top: 5px solid rgb(224, 224, 224);
-  border-radius: 10px;
 }
 main .main_div {
   width: 90%;
