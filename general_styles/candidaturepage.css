@@ -12,7 +12,6 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-  position: relative;
   /*obliger de definir le li dans le header pour le drapeau cela evite les repetitions*/
 }
 header a {
@@ -35,13 +34,6 @@ header .imb_button {
   margin: 0;
   display: flex;
   align-items: center;
-}
-header .n2 {
-  position: relative;
-  cursor: pointer;
-}
-header .n2:hover div.deroulant {
-  transform: scaleY(100%);
 }
 header li {
   text-align: center;
@@ -88,12 +80,16 @@ header div.deroulant:hover {
   transform: scaleY(100%);
 }
 header .n1 {
+  position: sticky;
   right: 0px;
-  position: absolute;
 }
 header .n2 {
+  position: sticky;
   right: 50px;
-  position: absolute;
+  cursor: pointer;
+}
+header .n2:hover div.deroulant {
+  transform: scaleY(100%);
 }
 
 .title {
@@ -318,4 +314,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
+}
+
+.n2 {
+  position: sticky;
+  right: 50px;
 }/*# sourceMappingURL=candidaturepage.css.map */

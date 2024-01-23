@@ -132,10 +132,6 @@ section.HubBox:hover p {
     width: 47%;
   }
 }
-html {
-  position: relative;
-}
-
 header {
   /*make the header style*/
   background-color: rgb(224, 224, 224);
@@ -172,13 +168,6 @@ header .imb_button {
   margin: 0;
   display: flex;
   align-items: center;
-}
-header .n2 {
-  position: relative;
-  cursor: pointer;
-}
-header .n2:hover div.deroulant {
-  transform: scaleY(100%);
 }
 header li {
   text-align: center;
@@ -225,12 +214,16 @@ header div.deroulant:hover {
   transform: scaleY(100%);
 }
 header .n1 {
+  position: sticky;
   right: 0px;
-  position: absolute;
 }
 header .n2 {
+  position: sticky;
   right: 50px;
-  position: absolute;
+  cursor: pointer;
+}
+header .n2:hover div.deroulant {
+  transform: scaleY(100%);
 }
 
 .title {

@@ -1,6 +1,4 @@
-html{
-    position: relative;
-}
+
 
 header{
     /*make the header style*/
@@ -39,17 +37,6 @@ header{
         margin: 0;
         display: flex;
         align-items: center;
-    }
-
-    .n2{
-        position: relative;
-        cursor: pointer;
-
-        &:hover{
-            div.deroulant{
-                transform: scaleY(100%);
-            }
-        }
     }
 
     /*obliger de definir le li dans le header pour le drapeau cela evite les repetitions*/
@@ -101,13 +88,20 @@ header{
     }
 
     .n1{
+        position: sticky;
         right: 0px;
-        position: absolute;
     }
     
     .n2{
+        position: sticky;
         right: 50px;
-        position: absolute;
+        cursor: pointer;
+
+        &:hover{
+            div.deroulant{
+                transform: scaleY(100%);
+            }
+        }
     }
     
 }
@@ -124,7 +118,6 @@ header{
 @media screen and (max-width:650px) {
     /*make the burger nav when the screen is small*/
     header{
-
         h1{
             /*make the title not attach to the burger icon*/
             margin-left: 20px;
