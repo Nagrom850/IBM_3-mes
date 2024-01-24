@@ -16,7 +16,6 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   padding: 10px;
-  max-height: 90vw;
   align-content: center;
   margin: auto;
   transition: 0.3s;
@@ -75,20 +74,15 @@ section.HubBox p {
   transition: 0.3s;
   transform-origin: bottom;
 }
-section.HubBox p img {
+section.HubBox p i {
+  color: #0F62FE;
   position: absolute;
-  bottom: 10px;
+  bottom: 7px;
   right: 10px;
-  height: 20px;
-  width: 20px;
-  border-radius: 15px;
-  padding: 2px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
-section.HubBox p img:hover {
-  background-color: rgba(213, 213, 213, 0.55);
-  transition: 0.3s;
-  cursor: pointer;
+section.HubBox p i:hover {
+  transform: scale(130%);
 }
 section.HubBox:hover p {
   transform: scaleY(100%);

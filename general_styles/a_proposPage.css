@@ -1,5 +1,5 @@
 header {
-  background-color: rgb(245, 240, 240);
+  background-color: rgb(245, 244, 244);
   height: auto;
   width: 100%;
   box-sizing: border-box;
@@ -117,13 +117,10 @@ header .n2:hover div.deroulant {
   }
 }
 footer {
-  display: flex;
-  background-color: rgb(245, 240, 240);
+  background-color: rgba(238, 238, 238, 0.55);
+  border: solid 1px black;
   height: auto;
   padding: 5px 20px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 
 nav {
