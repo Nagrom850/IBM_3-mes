@@ -1,0 +1,35 @@
+//ce fichier permet de faire notre annimation de soulignement dans le nav et les menu déroulant
+.underline {
+    &::after{
+        //creer un pseudo element après l'element possédant cette classe
+        content: '';
+        //le positionne en dessous de l'element et centré (5% de chaques coté permet de ratraper les 10% de la largeur)
+        position: absolute;
+        top: 101%;left: 5%;
+        //fait 90% de la largeur de l'element
+        width: 90%;
+        //2px de haut et noir
+        height: 2px;
+        background-color: black;
+        opacity: 1;
+        //le rend invisible au début
+        transform: scaleX(0);
+        //paramettre l'animation pour quel parte du centre de la barre de souligement
+        transform-origin: center;
+        transition: 0.2s;
+    }
+
+    //open signifie que on est actuellement sur la page et permet d'avoir un signal visuel nous permetant de savoir sur quelle page nous sommes
+    &.open{
+        &::after{
+            transform: scaleX(100%);
+        }
+    }
+    
+    &:hover{
+        &::after{
+            //quand on survole l'element on affiche le soulignement avec une animation
+            transform: scaleX(100%);
+        }
+    }
+}
