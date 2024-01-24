@@ -131,6 +131,9 @@ footer div {
   display: flex;
   flex-direction: column;
 }
+footer a {
+  color: black;
+}
 
 nav {
   /*nav for large screen*/

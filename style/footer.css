@@ -10,4 +10,7 @@ footer {
 footer div {
   display: flex;
   flex-direction: column;
+}
+footer a {
+  color: black;
 }/*# sourceMappingURL=footer.css.map */
