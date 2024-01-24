@@ -16,7 +16,7 @@ main {
   flex-wrap: wrap;
   flex-direction: column;
   padding: 10px;
-  max-height: 135vw;
+  max-height: 145vw;
   align-content: center;
   margin: auto;
   transition: 0.3s;
@@ -99,7 +99,7 @@ section.HubBox:hover p {
 @media screen and (max-width: 1300px) and (min-width: 650px) {
   /*2 columns when the screen is medium*/
   main {
-    max-height: 300vw;
+    max-height: 310vw;
   }
   section.HubBox {
     width: 47%;
