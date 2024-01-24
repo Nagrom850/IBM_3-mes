@@ -31,14 +31,16 @@ header{
             /*upScale it when over*/
             transform: scale(105%);
         }
-    }
 
-    .imb_button{
-        text-decoration: none;
-        color: black;
-        margin: 0;
-        display: flex;
-        align-items: center;
+        &.logo{
+            /*make the logo a little bigger*/
+            height: 30px;
+            width: auto;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     /*obliger de definir le li dans le header pour le drapeau cela evite les repetitions entre nav et header*/
@@ -140,7 +142,7 @@ header{
 @media screen and (max-width:650px) {
     /*make the burger nav when the screen is small*/
     header{
-        h1{
+        a.logo{
             /*make the title not attach to the burger icon*/
             margin-left: 20px;
         }
