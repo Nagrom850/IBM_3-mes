@@ -4,7 +4,8 @@ This is the readme file for the IBM-for-14_years_old website project.
 
 ## Description
 
-The IBM-for-14_years_old website is a project aimed at creating a website with a similar design and functionality to the official IBM website but the goal is to make IBM understandable by 14 years 14 years old
+The IBM-for-14_years_old website is a project aimed at creating a website with a similar design and functionality to the official IBM website but the goal is to make IBM understandable by 14 years 14 years old.
+In our project, we use IMB instead of IBM for the big parts to respect the copyright.
 
 ## Installation
 
