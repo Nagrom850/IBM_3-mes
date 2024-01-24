@@ -45,7 +45,7 @@ header div.deroulant {
   background: rgba(237, 237, 237, 0.7);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
   width: -moz-fit-content;
   width: fit-content;
@@ -121,6 +121,13 @@ footer {
   border: solid 1px black;
   height: auto;
   padding: 5px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
