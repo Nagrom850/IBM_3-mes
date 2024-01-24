@@ -35,7 +35,7 @@ textarea#adresse {
   height: 25px;
 }
 
-div {
+.cotecote {
   width: 100%;
   display: flex;
   flex-direction: row;

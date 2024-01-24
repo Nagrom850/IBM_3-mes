@@ -52,4 +52,7 @@ main .main_div section .texte {
   flex-direction: column;
   justify-content: center;
   flex-basis: 49%;
+}
+main .main_div section .texte p {
+  text-align: justify;
 }/*# sourceMappingURL=main_impl.css.map */

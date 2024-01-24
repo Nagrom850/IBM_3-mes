@@ -12,4 +12,23 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
+}
+
+main details {
+  cursor: pointer;
+}
+main .main_div ul {
+  list-style-type: disc;
+}
+main .main_div ul.detail {
+  list-style: none;
+}
+main .main_div section:nth-child(odd) {
+  flex-wrap: wrap-reverse;
+}
+main .main_div section:nth-child(even) {
+  flex-wrap: wrap;
+}
+main .main_div section > * {
+  box-sizing: border-box;
 }/*# sourceMappingURL=apropos.css.map */

@@ -120,7 +120,6 @@ header .n2:hover div.deroulant {
 }
 footer {
   background-color: rgba(238, 238, 238, 0.55);
-  border: solid 1px black;
   height: auto;
   padding: 5px 20px;
   display: flex;
@@ -281,10 +280,14 @@ main .main_div section:nth-child(even) {
 main .main_div section .images .compose {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 47%;
 }
-main .main_div section .images .compose img {
+main .main_div section .images .compose .montage {
   width: 100%;
+  border: 1px solid black;
+}
+main .main_div section .images .montage {
+  width: 53%;
   border: 1px solid black;
 }
 
@@ -342,4 +345,7 @@ main .main_div section .texte {
   flex-direction: column;
   justify-content: center;
   flex-basis: 49%;
+}
+main .main_div section .texte p {
+  text-align: justify;
 }/*# sourceMappingURL=activityPage.css.map */

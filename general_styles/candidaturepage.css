@@ -120,7 +120,6 @@ header .n2:hover div.deroulant {
 }
 footer {
   background-color: rgba(238, 238, 238, 0.55);
-  border: solid 1px black;
   height: auto;
   padding: 5px 20px;
   display: flex;
@@ -293,7 +292,7 @@ textarea#adresse {
   height: 25px;
 }
 
-div {
+.cotecote {
   width: 100%;
   display: flex;
   flex-direction: row;
