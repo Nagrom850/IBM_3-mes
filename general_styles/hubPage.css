@@ -75,20 +75,16 @@ section.HubBox p {
   transition: 0.3s;
   transform-origin: bottom;
 }
-section.HubBox p img {
+section.HubBox p i {
   position: absolute;
-  bottom: 10px;
+  bottom: 7px;
   right: 10px;
-  height: 20px;
-  width: 20px;
-  border-radius: 15px;
-  padding: 2px;
-  transition: 0.3s;
+  color: #0F62FE;
+  transition: 0.2s;
+  transform-origin: center;
 }
-section.HubBox p img:hover {
-  background-color: rgba(213, 213, 213, 0.55);
-  transition: 0.3s;
-  cursor: pointer;
+section.HubBox p i:hover {
+  transform: scale(130%);
 }
 section.HubBox:hover p {
   transform: scaleY(100%);
@@ -112,7 +108,7 @@ section.HubBox:hover p {
   }
 }
 header {
-  background-color: rgb(245, 244, 244);
+  background-color: rgb(245, 240, 240);
   height: auto;
   width: 100%;
   box-sizing: border-box;
@@ -231,8 +227,7 @@ header .n2:hover div.deroulant {
 }
 footer {
   display: flex;
-  background-color: rgb(245, 244, 244);
-  border: solid 1px black;
+  background-color: rgb(245, 240, 240);
   height: auto;
   padding: 5px 20px;
   flex-direction: row;
@@ -312,7 +307,7 @@ nav li:hover span {
     transform-origin: top;
     border-radius: 0;
     border: none;
-    border-top: 3px black solid;
+    border-top: 3px #0F62FE solid;
     display: flex;
     justify-content: center;
   }
@@ -350,7 +345,7 @@ nav li:hover span {
   left: 5%;
   width: 90%;
   height: 2px;
-  background-color: black;
+  background-color: #0F62FE;
   opacity: 1;
   transform: scaleX(0);
   transform-origin: center;
