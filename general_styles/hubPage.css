@@ -133,11 +133,13 @@ header img:hover, header > a:hover {
   /*upScale it when over*/
   transform: scale(105%);
 }
-header .imb_button {
-  text-decoration: none;
-  color: black;
-  margin: 0;
+header img.logo, header > a.logo {
+  /*make the logo a little bigger*/
+  height: 30px;
+  width: auto;
+  margin: 5px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 header li {
@@ -209,7 +211,7 @@ header .n2:hover div.deroulant {
 
 @media screen and (max-width: 650px) {
   /*make the burger nav when the screen is small*/
-  header h1 {
+  header a.logo {
     /*make the title not attach to the burger icon*/
     margin-left: 20px;
   }
@@ -242,7 +244,7 @@ nav {
   /*nav for large screen*/
   /*center the nav*/
   margin: auto auto;
-  padding: 0 100px 0 35px;
+  padding: 0 100px 0 0;
 }
 nav ul {
   list-style-type: none;
