@@ -1,0 +1,53 @@
+html, body{
+    height: auto;
+    //on defini la auteur minimal de la page pour qu'elle couvre l'entiereté de la fenêtre
+    min-height: 100vh;
+}
+
+body{
+    //on supprime la marge de base du body (qui on se demande pourquoi elle existe)
+    margin: 0;
+    font-family: Arial, serif;
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+
+}
+
+main{
+
+    .main_div {
+ 
+        section{
+            flex-wrap: wrap;
+
+            &:nth-child(even) {
+                //permet de changer l'ordre entre les image et le texte lors du raitrécissement de la page
+                flex-wrap: wrap-reverse;
+            }
+            
+            .images{
+
+                .compose{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    img{
+                        width: 100%;
+                        border: 1px solid black;
+                    
+                    }
+
+                }
+        
+            }
+
+        }
+
+    }
+}
+
