@@ -34,14 +34,19 @@ main{
                 .compose{
                     display: flex;
                     flex-direction: column;
-                    width: 100%;
+                    width: 47%;
 
-                    img{
+                    .montage{
                         width: 100%;
                         border: 1px solid black;
                     
                     }
+                }
 
+                .montage{
+                    width: 53%;
+                    border: 1px solid black;
+                
                 }
         
             }
