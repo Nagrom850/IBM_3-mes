@@ -1,6 +1,10 @@
 header {
+<<<<<<< HEAD
   background-color: rgb(224, 224, 224);
   border: solid 1px black;
+=======
+  background-color: rgb(245, 244, 244);
+>>>>>>> 5d6d7fe010a1df6d0a7bddeb9ef8b5f05cb5789b
   height: auto;
   width: 100%;
   box-sizing: border-box;
@@ -118,10 +122,14 @@ header .n2:hover div.deroulant {
   }
 }
 footer {
-  background-color: rgba(238, 238, 238, 0.55);
+  display: flex;
+  background-color: rgb(245, 244, 244);
   border: solid 1px black;
   height: auto;
   padding: 5px 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav {
@@ -284,7 +292,7 @@ textarea#adresse {
   height: 25px;
 }
 
-div {
+.cotecote {
   width: 100%;
   display: flex;
   flex-direction: row;

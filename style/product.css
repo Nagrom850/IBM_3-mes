@@ -1,6 +1,7 @@
 html, body {
   height: auto;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,42 +15,14 @@ body {
   background-color: white;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+main details {
+  cursor: pointer;
 }
-main hr {
-  width: 100%;
-  border-top: 5px solid rgb(224, 224, 224);
-  border-radius: 10px;
+main .main_div ul {
+  list-style-type: disc;
 }
-main .main_div {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-main .main_div li {
-  list-style-type: none;
-}
-main .main_div section {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-main .main_div section.section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-main .main_div section.visible {
-  opacity: 1;
-  transform: translateY(0);
+main .main_div ul.detail {
+  list-style: none;
 }
 main .main_div section:nth-child(odd) {
   flex-wrap: wrap-reverse;
@@ -58,39 +31,5 @@ main .main_div section:nth-child(even) {
   flex-wrap: wrap;
 }
 main .main_div section > * {
-  flex-basis: 49%;
   box-sizing: border-box;
-}
-main .main_div section .images {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: top;
-}
-main .main_div section .images div {
-  display: flex;
-  flex-direction: column;
-  width: 47%;
-}
-main .main_div section .images div img {
-  width: 100%;
-  border: 1px solid black;
-}
-main .main_div section .images img {
-  width: 53%;
-  border: 1px solid black;
-}
-main .main_div section .texte {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@media screen and (max-width: 1108px) {
-  main section {
-    flex-basis: 100%;
-  }
-  main section > * {
-    flex-basis: 90%;
-  }
 }/*# sourceMappingURL=product.css.map */

@@ -1,6 +1,10 @@
 header {
+<<<<<<< HEAD
   background-color: rgb(224, 224, 224);
   border: solid 1px black;
+=======
+  background-color: rgb(245, 244, 244);
+>>>>>>> 5d6d7fe010a1df6d0a7bddeb9ef8b5f05cb5789b
   height: auto;
   width: 100%;
   box-sizing: border-box;
@@ -118,10 +122,14 @@ header .n2:hover div.deroulant {
   }
 }
 footer {
-  background-color: rgba(238, 238, 238, 0.55);
+  display: flex;
+  background-color: rgb(245, 244, 244);
   border: solid 1px black;
   height: auto;
   padding: 5px 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav {
@@ -263,6 +271,25 @@ body {
   background-color: white;
 }
 
+main .main_div section {
+  flex-wrap: wrap;
+}
+main .main_div section:nth-child(even) {
+  flex-wrap: wrap-reverse;
+}
+main .main_div section .images .compose {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main .main_div section .images .compose img {
+  width: 100%;
+  border: 1px solid black;
+}
+main .main_div section .images .montage {
+  width: 53%;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -286,7 +313,6 @@ main .main_div {
 }
 main .main_div section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -299,9 +325,6 @@ main .main_div section.visible {
   opacity: 1;
   transform: translateY(0);
 }
-main .main_div section:nth-child(even) {
-  flex-wrap: wrap-reverse;
-}
 main .main_div section > * {
   box-sizing: border-box;
 }
@@ -311,18 +334,6 @@ main .main_div section .images {
   justify-content: center;
   align-items: center;
   flex-basis: 49%;
-}
-main .main_div section .images .compose {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-main .main_div section .images .compose img {
-  width: 100%;
-  border: 1px solid black;
-}
-main .main_div section .images .montage {
-  width: 53%;
 }
 main .main_div section .images img {
   width: 100%;
