@@ -1,12 +1,12 @@
 footer{
     //même style graphique que le header
     background-color: rgba(238, 238, 238, 0.55);
-    border: solid 1px black;
     height: auto;
     padding: 5px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
     div {
         display: flex;
