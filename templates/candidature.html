@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBM pour les 3èmes</title>
+    <title>IMB : Candidature</title>
     <link rel="stylesheet" href="../general_styles/candidaturepage.css">
 </head>
 <body>
   <header>
     <a href="" class="open-btn"><img src="../../Images/Navigation/open-btn.webp" alt="Open"></a> <!-- burger logo -->
-    <a href="index.html" class="imb_button"><h1>IMB</h1></a>
+    <a class="logo" href="index.html" class="imb_button"><img class="logo" src="../../Images/Navigation/Logo.webp"></a>
     <nav>
           <a href="" class="close-btn"><img src="../Images/Navigation/close-btn.webp" alt="Close"></a> <!-- burger close logo -->
           <ul>
@@ -63,7 +63,7 @@
     </header>
     <main>
       <form method="post" action="traitement.php">
-        <h1 class="title">Candidature</h1>
+        <h1 class="title">Rejoins nous !</h1>
         <div class="cotecote">
           <input id="nom" type="text" name="nom" placeholder="Nom" required>
           <input id="prenom" type="text" name="prenom" placeholder="Prénom" required>
@@ -77,12 +77,18 @@
           <select id="pays" name="pays">
             <optgroup label="Europe">
               <option value="allemagne">Allemagne</option>
-              <option value="engleterre">Engleterre</option>
+              <option value="engleterre">Angleterre</option>
+              <option value="espagne">Espagne</option>
               <option value="france" selected>France</option>
+              <option value="italie">Italie</option>
             </optgroup>
             <optgroup label="Amériques">
               <option value="etats-unis">Etats Unis</option>
               <option value="canada">Canada</option>
+            </optgroup>
+            <optgroup label="Asie">
+              <option value="chine">Chine</option>
+              <option value="japon">Japon</option>
             </optgroup>
           </select>
     
