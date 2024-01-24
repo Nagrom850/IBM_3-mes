@@ -2,6 +2,7 @@ html, body{
     height: auto;
     //on defini la auteur minimal de la page pour qu'elle couvre l'entiereté de la fenêtre
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -14,11 +15,9 @@ body{
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
-
 }
 
 main{
-   
     details{
         cursor: pointer;
     }
