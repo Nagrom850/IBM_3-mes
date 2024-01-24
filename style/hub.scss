@@ -24,7 +24,7 @@ main{
     flex-direction: column;
     padding: 10px;
     //ajuste la taille pour afficher 3 column quand la fenêtre et en grand
-    max-height: 90vw;
+    //max-height: 90vw;
     align-content: center;
     margin: auto;
     transition: $transition-time;
@@ -100,24 +100,17 @@ section.HubBox{
         //donc origine de la transformation en bas de l'elements en question
         transform-origin: bottom;
 
-        img{
-            //on attache une fleche a cette descriuption pour montrer que cela doit renvoyer quelque part sur le site
+        i{
+            color: #0F62FE;
             position: absolute;
-            bottom: 10px; right: 10px;
-            height: 20px;
-            width: 20px;
-            border-radius: 15px;
-            padding: 2px;
-            transition: $transition-time;
+            bottom: 7px;right: 10px;
+            transition: 0.2s;
 
             &:hover{
-                //on montre que c'est cliquable avec un petit effait et un changement de pointeur
-                background-color: $hover-gray;
-                transition: $transition-time;
-
-                cursor: pointer;
+                transform: scale(130%);
             }
         }
+        
     }
     
     &:hover p{

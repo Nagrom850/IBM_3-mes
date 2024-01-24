@@ -70,7 +70,7 @@ nav li:hover span {
     transform-origin: top;
     border-radius: 0;
     border: none;
-    border-top: 3px black solid;
+    border-top: 3px #0F62FE solid;
     display: flex;
     justify-content: center;
   }
