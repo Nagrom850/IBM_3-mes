@@ -3,4 +3,11 @@ footer {
   border: solid 1px black;
   height: auto;
   padding: 5px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=footer.css.map */
